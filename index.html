@@ -65,9 +65,9 @@
 					</a>
 					<span class="w-wk cl-txt">};</span>
 
-					<!-- //Or ping me at: LinkedIn, CodePen, Repl.it  -->
+					<!-- //Or find me at: LinkedIn, CodePen, Repl.it  -->
 					<p>
-						<span class="cl-cmt tab1">//Or ping me at:
+						<span class="cl-cmt tab1">//Or find me at:
 							<a target="_blank" href="https://www.linkedin.com/in/steven-dao-b9a065127/">
 								<span class="lk-cmt">LinkedIn</span>
 						</a>,
@@ -126,7 +126,7 @@
 					<span class="cl-str"><span class="w-wk">"</span>{{event.date}}<span class="w-wk">"</span></span>
 					<span class="cl-txt w-wk">,</span>
 					<span class="cl-str"><span class="w-wk">"</span>{{event.job.title}}</span>
-					<a target="_blank" ng-href="{{event.job.link}}">
+					<a target="_blank" ng-if="event.job.hasOwnProperty('place')" ng-href="{{event.job.link}}">
 								<span class="cl-str lk-str">{{event.job.place}}</span></a><span class="w-wk cl-str">"</span>
 					<span class="cl-txt w-wk">},</span>
 					<br>
