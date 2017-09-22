@@ -1,0 +1,364 @@
+/*general*/
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+html {
+	box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #1E1E1E;
+	font-family: 'Source Code Pro', monaco, sans-serif;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+p {
+	opacity: 0.9;
+}
+
+/*coding*/
+
+.cl-cmt {
+	color: #618A51;
+}
+
+.cl-txt {
+	color: #D4D4D4;
+}
+
+.cl-key {
+	color: #589CD3;
+}
+
+.cl-cls {
+	color: #54C8B0;
+}
+
+.cl-str {
+	color: #CD917A;
+}
+
+.cl-var {
+	color: #9DDBFB;
+}
+
+/* color-function */
+.cl-fn { 
+	color: #DCDCAD;
+}
+
+.tab1 {
+	padding-left: 3em;
+}
+
+.tab2 {
+	padding-left: 6em;
+}
+
+.tab3 {
+	padding-left: 9em;
+}
+
+.w-str {
+	font-weight: 300;
+}
+
+.w-wk {
+	opacity: 0.4;
+	font-weight: 200;
+}
+
+.link {
+	position: relative;
+	display: inline-block;
+	font-weight: 600;
+	padding: 0 1px;
+	opacity: 0.99;
+	transition: color ease 0.3s;
+	font-size: 110%;
+}
+
+.link:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 0;
+	left: 0;
+	bottom: 0;
+	transition: all ease 0.3s;
+}
+
+.link:hover {
+	color: #1E1E1E;
+}
+
+.link:hover:after {
+	height: 100%;
+}
+
+.link-text:after {
+	background-color: #D4D4D4;
+}
+
+.link-string:after {
+	background-color: #CD917A;
+}
+
+.link-variable:after {
+	background-color: #9DDBFB;
+}
+
+.link-class:after {
+	background-color: #54C8B0;
+}
+.link-comment:after {
+	background-color: #618A51;
+}
+
+/*navigation bar*/
+
+header {
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 80px;
+	width: 100%;
+	margin-left: 40px;
+	background-color: #252526;
+	padding-right: 40px;
+	opacity: 1;
+	z-index: 1;
+}
+
+header img {
+	height: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	margin-left: -40px;
+}
+
+.nav-bar {
+	padding: 13px;
+}
+
+.nav-bar a {
+	padding: 15px;
+	text-decoration: none;
+	color: white;
+}
+
+.nav-bar ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+
+
+/*footer*/
+
+.footer {
+	height: 15vh;
+	padding-top: 30px;
+	padding-right: 50px;
+	background-color: #1E1E1E;
+	color: #D4D4D4;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.footer span {
+	height: 20px;
+}
+
+
+/*content*/
+
+.content {
+	margin: 0 auto;
+	min-width: 1000px;
+}
+
+.section {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 100px 0;
+	height: 500px;
+	overflow: hidden;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.section a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+.section a {
+	font-weight: 600;
+	font-size: 110%;
+	color: inherit;
+}
+
+.section>div {
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+
+/*banner*/
+
+#banner {
+	height: 100vh;
+}
+
+#banner span {
+	margin-bottom: 2px;
+}
+
+
+/*timeline*/
+
+#timeline {
+	height: 1000px;
+}
+
+
+/*interest*/
+
+#interest {
+	height: 500px;
+}
+
+#interest>div {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#interest>div>div {
+	background-color: rgba(52, 73, 94, 0.75);
+}
+
+#interest ul {
+	list-style: none;
+}
+
+.col30 {
+	width: 30%;
+}
+
+.col70 {
+	width: 70%;
+}
+
+.hide {
+	display: none;
+}
+
+.mySlides {
+	position: relative;
+	width: 100%;
+}
+
+.badge {
+	background-color: black;
+	color: #D3D3D3;
+	display: inline-block;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-align: center;
+	padding: 1px;
+	cursor: default;
+	border-radius: 5%;
+	margin-bottom: 1px;
+}
+
+.badge:hover {
+	background-color: white;
+	color: black;
+}
+
+
+/*projects*/
+
+#projects {
+	height: 1500px;
+	padding: 0;
+}
+
+#projects-container {
+	background-color: #1E1E1E;
+	opacity: 0.9;
+}
+
+
+/*credit*/
+
+#credit {
+	height: 85vh;
+}
+
+#credit span {
+	font-size: 120%;
+	margin-bottom: 2px;
+}
+
+
+/*typewritter*/
+
+.anim-typewriter {
+	display: block;
+	position: relative;
+	border-right: 2px solid rgba(255, 255, 255, .75);
+	white-space: nowrap;
+	overflow: hidden;
+	transform: translateY(-50%);
+	animation: typewriter 1.5s steps(17) 0s 1 both, blinkTextCursor 1s steps(17) infinite normal;
+}
+
+
+/* Animation */
+
+@keyframes typewriter {
+	from {
+		width: 0;
+	}
+	to {
+		width: 168px;
+	}
+}
+
+@keyframes blinkTextCursor {
+	from {
+		border-right-color: rgba(255, 255, 255);
+	}
+	to {
+		border-right-color: transparent;
+	}
+}
