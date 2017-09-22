@@ -1,0 +1,131 @@
+[
+  {
+    "name": "Pacman",
+    "place": "Personal",
+    "skills": [
+      "C++",
+      "Javascript"
+    ],
+    "link": "https://github.com/iamstevendao/pacman",
+    "description": [
+      "Pacman game built by 2 different platforms: C++ and Javascript",
+      "Even I finished Javascript version first, which took about 2 days,",
+      "C++ was always challenging when I needed a week to implement >.<,",
+      "and I will remember it as the first time I carefully documented my project."
+    ]
+  },
+  {
+    "name": "AromaPlayer",
+    "place": "Company",
+    "skills": [
+      "OpenGL",
+      "C++",
+      "VLC-SDK"
+    ],
+    "link": "https://aromajoin.com/software/apps/aroma-player",
+    "description": [
+      "AromaPlayer is a video player which can interact with AromaShooters",
+      "It allows you to add and enjoy aromas of your favorite videos.",
+      "C++ was always challenging when I needed a week to implement >.<,",
+      "It took me 1 year to plan, code, test and release."
+    ]
+  },
+  {
+    "name": "AromaPlayer2.0",
+    "place": "Company",
+    "skills": [
+      "WPF",
+      "C#",
+      "MVVM"
+    ],
+    "link": "https://aromajoin.com/software/apps/aroma-player",
+    "description": [
+      "Second version of AromaPlayer, built from the scratch with WPF",
+      "With the help of my team, it is in testing stage after a half year developing."
+    ]
+  },
+  {
+    "name": "SuperfastDictionary",
+    "place": "Personal",
+    "skills": [
+      "Android",
+      "NoSQL",
+      "MinimalDesign"
+    ],
+    "link": "https://github.com/iamstevendao/Superfast-Dictionary",
+    "description": [
+      "My first published app as the result of 1 week fighting with Android Studio ",
+      "User interface is minimalized to get an incredible speed of loading data.",
+      "Attracted 25k downloads with 500 daily active users."
+    ]
+  },
+  {
+    "name": "AfterAll",
+    "place": "Personal",
+    "skills": [
+      "Android",
+      "GoogleCalendarAPI",
+      "MaterialDesign"
+    ],
+    "link": "https://github.com/iamstevendao/AfterAll",
+    "description": [
+      "Currently in beta, this app saves your important dates, countdown and get noti.",
+      "Syncing between devices using Google Calendar API."
+    ]
+  },
+  {
+    "name": "FreeCodeCamp",
+    "place": "Personal",
+    "skills": [
+      "HTML",
+      "CSS",
+      "Javascript"
+    ],
+    "link": "https://www.freecodecamp.org/iamstevendao",
+    "description": [
+      " I have finished Front End Development Certification from FreeCodeCamp",
+      "which is worth 500 hours of learning and coding, with many challenges and projects."
+    ]
+  },
+  {
+    "name": "Naruto",
+    "place": "School",
+    "skills": [
+      "Web"
+    ],
+    "link": "https://iamstevendao.github.io/Naruto/html/index.html",
+    "description": [
+      "My final assessment of Intro to Web class at AIT, with the score of 96%."
+    ]
+  },
+  {
+    "name": "Hachi",
+    "place": "School",
+    "skills": [
+      "JavaFX",
+      "MVC",
+      "MySQL"
+    ],
+    "link": "https://bitbucket.org/iamstevendao/hachi",
+    "description": [
+      "Assessment for Java class at HUST.",
+      "Management Software for Libraries which can keep track of staffs, members and books.",
+      "With a good UI and necessary functions, It can be applied right away in any libraries."
+    ]
+  },
+  {
+    "name": "EngVnDictionary",
+    "place": "School",
+    "skills": [
+      "Linux",
+      "GTK3+",
+      "C"
+    ],
+    "link": "https://github.com/taohansamu/HTKdict",
+    "description": [
+      "First project in the first term of HUST, it was a dictionary in Linux.",
+      "Even with the limit of knowledge about coding, we had to search and read a lot",
+      "thanks to the effort of all members, we did make an incredible application."
+    ]
+  }
+]

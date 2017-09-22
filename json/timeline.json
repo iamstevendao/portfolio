@@ -1,4 +1,5 @@
-[{
+[
+  {
     "date": "September 2017",
     "job": {
       "title": "Embarrass myself by writing",
@@ -13,7 +14,7 @@
   {
     "date": "June 2017",
     "job": {
-      "title": "Software Developer & Customer Support at",
+      "title": "Software Developer & IT Support at",
       "place": "Becas Technology",
       "link": "http://www.becas.com.au/"
     },
