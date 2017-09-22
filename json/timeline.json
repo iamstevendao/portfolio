@@ -1,0 +1,96 @@
+[{
+    "date": "September 2017",
+    "job": {
+      "title": "Embarrass myself by writing",
+      "place": "blog",
+      "link": "https://iamstevendao.github.io/blog"
+    },
+    "description": [
+      "Feel like it is the biggest step in my life so far,",
+      "I will work on any dumb things I come up with, and learn writing like other awesome people"
+    ]
+  },
+  {
+    "date": "June 2017",
+    "job": {
+      "title": "Software Developer & Customer Support at",
+      "place": "Becas Technology",
+      "link": "http://www.becas.com.au/"
+    },
+    "description": [
+      "Develop, implement applications, APIs for paging system solutions,",
+      "restaurant and gas station management.",
+      "Customer support with errors, bugs and required implementation."
+    ]
+  },
+  {
+    "date": "June 2017",
+    "job": {
+      "title": "IT Assistant at",
+      "place": "SMASH!",
+      "link": "https://www.smash.org.au/"
+    },
+    "description": [
+      "Volunteer and help SMASH! in IT department, work under instructions of IT Director,",
+      "with coding, setting up network, computers, devices for the convention."
+    ]
+  },
+  {
+    "date": "March 2017",
+    "job": {
+      "title": "Information Technology at",
+      "place": "Academy of IT",
+      "link": "http://www.ait.edu.au/courses/it-courses"
+    },
+    "description": [
+      "As a first step to settle down a new life in Australia,",
+      "I decided to start my study with an IT course at AIT."
+    ]
+  },
+  {
+    "date": "October 2016",
+    "job": {
+      "title": "Arrived at Australia"
+    },
+    "description": [
+      "Then, a new chapter was going to begin. I can make it!"
+    ]
+  },
+  {
+    "date": "March 2016",
+    "job": {
+      "title": "First Android app:",
+      "place": "Superfast Dictionary",
+      "link": "https://play.google.com/store/apps/details?id=fukie.sieunhanhav"
+    },
+    "description": [
+      "My first application which is not something so big but it was a step I couldn't forget",
+      "and has become a reasonable motivation for me to keep learning and doing what I love."
+    ]
+  },
+  {
+    "date": "September 2015",
+    "job": {
+      "title": "Software Developer at",
+      "place": "Aromajoin Corporation",
+      "link": "https://aromajoin.com/en"
+    },
+    "description": [
+      "Develop Windows applications, add-in, and SDKs to connect with AromaShooters.",
+      "Work independently and with a team of five in different parts.",
+      "Plan, develop and release applications."
+    ]
+  },
+  {
+    "date": "September 2013",
+    "job": {
+      "title": "Computer Science at",
+      "place": "Hanoi University of Science and Technology",
+      "link": "https://soict.hust.edu.vn/en/"
+    },
+    "description": [
+      "Where I started to dream, to know what I have to do to pursue it, and to make it real.",
+      "There were hard days, but what I learned is, I did learn a lot."
+    ]
+  }
+]

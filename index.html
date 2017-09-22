@@ -6,8 +6,10 @@
 	<title>Steven's Portfolio</title>
 	<link rel="icon" href="img/logo/avatar.jpg">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
 	<script src="js/animation.js"></script>
+	<script src="js/data.js"></script>
 </head>
 
 <body>
@@ -26,7 +28,7 @@
 			</ul>
 		</nav>
 	</header>
-	<div class="content">
+	<div class="content" ng-app="data" ng-controller="DataController">
 
 		<!-- Banner -->
 		<div id="banner" class="section">
@@ -118,214 +120,21 @@
 				<br>
 				<span class="cl-txt w-wk tab1">{</span>
 
-				<!-- Sep 2017 -->
-				<p>
-
-					<!-- { "September 2017" , "Embarrass myseft by writing blog and LiverStudio" },  -->
-
+				<!-- Timeline Content -->
+				<p ng-repeat="event in timeline">
 					<span class="cl-txt tab2 w-wk">{</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">September 2017</span>
-					<span class="cl-str w-wk">"</span>
+					<span class="cl-str"><span class="w-wk">"</span>{{event.date}}<span class="w-wk">"</span></span>
 					<span class="cl-txt w-wk">,</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">Embarrass myseft by writing
-						<a target="_blank" href="https://iamstevendao.github.io/blog">
-							<span class="lk-str">blog</span>
-					</a>
-					and
-					<a target="_blank" href="https://docs.google.com/spreadsheets/d/1XN6vbJsW4zw5THmVj50cbXyvk0Mu7c9UZGtzwhKGZdQ/edit?usp=sharing">
-							<span class="lk-str">LiverStudio</span>
-						</a>
-					<span class="w-wk">"</span>
+					<span class="cl-str"><span class="w-wk">"</span>{{event.job.title}}</span>
+					<a target="_blank" ng-href="{{event.job.link}}">
+								<span class="cl-str lk-str">{{event.job.place}}</span></a><span class="w-wk cl-str">"</span>
+					<span class="cl-txt w-wk">},</span>
+					<br>
+					<span class="cl-cmt" ng-repeat="desc in event.description">
+								<span class="tab2 w-wk">//</span>
+					<span>{{desc}}</span>
+					<br>
 					</span>
-					<span class="cl-txt w-wk">},</span>
-					<br>
-
-					<!-- //Feel like it is the biggest step in my life so far,  -->
-
-					<span class="cl-cmt tab2 w-wk">//</span>
-					<span class="cl-cmt">Feel like it is the biggest step in my life so far,</span>
-					<br>
-
-					<!-- //I will work on any dumb things I come up with, and learn writing like other awesome people	-->
-
-					<span class="cl-cmt tab2 w-wk">//</span>
-					<span class="cl-cmt">I will work on any dumb things I come up with, and learn writing like other awesome people</span>
-
-				</p>
-
-				<!-- June 2017 -->
-				<p>
-
-					<!-- { "June 2017" , "Software Developer & Customer Support at Becas Technology " },  -->
-
-					<span class="cl-txt tab2 w-wk">{</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">June 2017</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-txt w-wk">,</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">Software Developer & Customer Support at
-						<a target="_blank" href="http://www.becas.com.au/">
-							<span class="lk-str">Becas Technology</span>
-					</a>
-					<span class="w-wk">"</span>
-					</span>
-					<span class="cl-txt w-wk">},</span>
-					<br>
-
-					<!-- /* Develop, implement applications, APIs for paging system solutions,	-->
-
-					<span class="cl-cmt tab2 w-wk">/*</span>
-					<span class="cl-cmt">Develop, implement applications, APIs for paging system solutions,</span>
-					<br>
-
-					<!-- restaurant and gas station management. */ -->
-
-					<span class="cl-cmt tab2">restaurant and gas station management.</span>
-					<span class="cl-cmt w-wk">*/</span>
-					<br>
-
-					<!-- // Customer support with errors, bugs and required implementation. -->
-
-					<span class="cl-cmt tab2 w-wk">//</span>
-					<span class="cl-cmt">Customer support with errors, bugs and required implementation.</span>
-				</p>
-
-				<!-- June 2017 -->
-				<p>
-					<span class="cl-txt tab2 w-wk">{</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">June 2017</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-txt w-wk">,</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">IT Assistant at
-						<a target="_blank" href="https://www.smash.org.au/">
-							<span class="lk-str">SMASH!</span>
-					</a>
-					<span class="w-wk">"</span>
-					</span>
-					<span class="cl-txt w-wk">},</span>
-					<br>
-					<span class="cl-cmt tab2 w-wk">/*</span>
-					<span class="cl-cmt">Volunteer and help SMASH! in IT department, work under instructions of IT Director,</span>
-					<br>
-					<span class="cl-cmt tab2">with coding, setting up network, computers, devices for the convention.</span>
-					<span class="cl-cmt w-wk">*/</span>
-				</p>
-
-				<!-- March 2017 -->
-				<p>
-					<span class="cl-txt tab2 w-wk">{</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">March 2017</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-txt w-wk">,</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">Information Technology at
-						<a target="_blank" href="http://www.ait.edu.au/courses/it-courses">
-							<span class="lk-str">Academy of IT</span>
-					</a>
-					<span class="w-wk">"</span>
-					</span>
-					<span class="cl-txt w-wk">},</span>
-					<br>
-					<span class="cl-cmt tab2 w-wk">/*</span>
-					<span class="cl-cmt">As a first step to settle down a new life in Australia,</span>
-					<br>
-					<span class="cl-cmt tab2">I decided to start my study with an IT course at AIT.</span>
-					<span class="cl-cmt w-wk">*/</span>
-				</p>
-
-				<!-- October 2016 -->
-				<p>
-					<span class="cl-txt tab2 w-wk">{</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">October 2016</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-txt w-wk">,</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">Arrived at Australia</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-txt w-wk">},</span>
-					<br>
-					<span class="cl-cmt tab2 w-wk">//</span>
-					<span class="cl-cmt">Then, a new chapter was going to begin. I can make it!</span>
-				</p>
-
-				<!-- March 2016 -->
-				<p>
-					<span class="cl-txt tab2 w-wk">{</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">March 2016</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-txt w-wk">,</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">First Android app:
-						<a target="_blank" href="https://play.google.com/store/apps/details?id=fukie.sieunhanhav">
-							<span class="lk-str">'Super-fast' Dictionary</span>
-					</a>
-					<span class="w-wk">"</span>
-					</span>
-					<span class="cl-txt w-wk">},</span>
-					<br>
-					<span class="cl-cmt tab2 w-wk">/*</span>
-					<span class="cl-cmt">My first application which is not something so big but it was a step I couldn't forget</span>
-					<br>
-					<span class="cl-cmt tab2">and has become a reasonable motivation for me to keep learning and doing what I love.</span>
-					<span class="cl-cmt w-wk">*/</span>
-				</p>
-
-				<!-- September 2015 -->
-				<p>
-					<span class="cl-txt tab2 w-wk">{</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">September 2015</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-txt w-wk">,</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">Software Developer at
-						<a target="_blank" href="https://aromajoin.com/en">
-							<span class="lk-str">Aromajoin Corporation</span>
-					</a>
-					<span class="w-wk">"</span>
-					</span>
-					<span class="cl-txt w-wk">},</span>
-					<br>
-					<span class="cl-cmt tab2 w-wk">//</span>
-					<span class="cl-cmt">Develop Windows applications, add-in, and SDKs to connect with AromaShooters.</span>
-					<br>
-					<span class="cl-cmt tab2 w-wk">//</span>
-					<span class="cl-cmt">Work independently and with a team of five in different parts.</span>
-					<br>
-					<span class="cl-cmt tab2 w-wk">//</span>
-					<span class="cl-cmt">Plan, develop and release applications.</span>
-				</p>
-
-				<!-- September 2013 -->
-
-				<p>
-					<span class="cl-txt tab2 w-wk">{</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">September 2013</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-txt w-wk">,</span>
-					<span class="cl-str w-wk">"</span>
-					<span class="cl-str">Computer Science at
-						<a target="_blank" href="https://soict.hust.edu.vn/en/">
-							<span class="lk-str" style="font-size: 100%;">Hanoi University of Science and Technology</span>
-					</a>
-					<span class="w-wk">"</span>
-					</span>
-					<span class="cl-txt w-wk">},</span>
-					<br>
-					<span class="cl-cmt tab2 w-wk">/*</span>
-					<span class="cl-cmt">Where I started to dream, to know what I have to do to pursue it, and to make it real.</span>
-					<br>
-					<span class="cl-cmt tab2">There were hard days, but what I learned is, I did learn a lot.</span>
-					<span class="cl-cmt w-wk">*/</span>
 				</p>
 
 				<span class="cl-txt tab1 w-wk">};</span>
