@@ -45,10 +45,10 @@ $(document).ready(function () {
 var timer;
 const NUMBER_BADGES = 8;
 const url = [
+	'http://www.the-fanboy-perspective.com/uploads/1/7/3/8/17382151/rgfesdgfes_orig.jpg',
 	'https://wallpaperscraft.com/image/liverpool_uefa_evrofinal_england_cup_27760_1920x1080.jpg',
 	'http://wallpapersdota2.com/wp-content/uploads/2015/02/wallpapersdota2.com-699.jpg',
-	'http://www.the-fanboy-perspective.com/uploads/1/7/3/8/17382151/rgfesdgfes_orig.jpg',
-	'http://cdn.wallpapersafari.com/70/56/hQ4VgI.jpg'
+	'http://stuffpoint.com/dragonball-z-anime/image/114886-dragonball-z-anime-goku-wallpaper.jpg'
 ]
 
 function set(dot, highlight) {

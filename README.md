@@ -10,8 +10,8 @@
 - Font: Monaco
 
 - Images:
-  - [Naruto](https://wallpaperscraft.com/image/liverpool_uefa_evrofinal_england_cup_27760_1920x1080.jpg)
+  - [Naruto](http://www.the-fanboy-perspective.com/uploads/1/7/3/8/17382151/rgfesdgfes_orig.jpg)
   - [Liverpool](https://wallpaperscraft.com/image/liverpool_uefa_evrofinal_england_cup_27760_1920x1080.jpg)
   - [Earthshaker](http://wallpapersdota2.com/wp-content/uploads/2015/02/wallpapersdota2.com-699.jpg)
-  - [Dragonball](http://wallpapersafari.com/w/hQ4VgI/)
+  - [Dragonball](http://stuffpoint.com/dragonball-z-anime/image/114886-dragonball-z-anime-goku-wallpaper.jpg)
 
