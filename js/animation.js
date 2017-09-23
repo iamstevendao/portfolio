@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	var all = $(".project");
-	showDivs(slideIndex);
+	show(0);
 
 	$(".project-name").hover(function () {
 		var index = $(".project-name").index(this);
@@ -40,42 +40,34 @@ $(document).ready(function () {
 	});
 });
 
-var slideIndex = 1;
+
+// interest
 var timer;
-var firsttime = true;
+const NUMBER_BADGES = 8;
+const url = [
+	'https://wallpaperscraft.com/image/liverpool_uefa_evrofinal_england_cup_27760_1920x1080.jpg',
+	'http://wallpapersdota2.com/wp-content/uploads/2015/02/wallpapersdota2.com-699.jpg',
+	'http://www.the-fanboy-perspective.com/uploads/1/7/3/8/17382151/rgfesdgfes_orig.jpg',
+	'http://cdn.wallpapersafari.com/70/56/hQ4VgI.jpg'
+]
 
-function plusDivs(n) {
-	showDivs(slideIndex += n);
+function set(dot, highlight) {
+	dot.style.backgroundColor = highlight ? "white" : "black";
+	dot.style.color = highlight ? "black" : "#D4D4D4";
 }
 
-function currentDiv(n) {
-	showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
+function show(n) {
 	clearTimeout(timer);
-	var i;
-	var x = $(".mySlides");
 	var dots = $(".badge");
-	if (n > x.length) {
-		slideIndex = 1;
+
+	for (let i = 0; i < dots.length; i = i + 2) {
+		set(dots[i], false);
 	}
-	if (n < 1) {
-		slideIndex = x.length;
-	}
-	for (i = 0; i < x.length; i++) {
-		x[i].style.display = "none";
-	}
-	for (i = 0; i < dots.length; i = i + 2) {
-		dots[i].style.backgroundColor = "black";
-		dots[i].style.color = "#D4D4D4";
-	}
-	x[slideIndex - 1].style.display = "block";
-	$('#interest').css('background-image', 'url(' + x[slideIndex - 1].getAttribute("src") + ')');
-	dots[slideIndex * 2 - 2].style.backgroundColor = "white";
-	dots[slideIndex * 2 - 2].style.color = "black";
+
+	$('#interest').css('background-image', 'url(' + url[n] + ')');
+	set(dots[n * 2], true);
 
 	timer = setTimeout(function () {
-		plusDivs(1);
+		show(n == dots.length / 2 - 1 ? 0 : ++n)
 	}, 2000);
 }

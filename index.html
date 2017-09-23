@@ -126,7 +126,7 @@
 					<span class="cl-str"><span class="w-wk">"</span>{{event.date}}<span class="w-wk">"</span></span>
 					<span class="cl-txt w-wk">,</span>
 					<span class="cl-str"><span class="w-wk">"</span>{{event.job.title}}</span><a target="_blank" ng-if="event.job.hasOwnProperty('place')"
-					 ng-href="{{event.job.link}}">
+					  ng-href="{{event.job.link}}">
 								<span class="cl-str lk-str"> {{event.job.place}}</span></a><span class="w-wk cl-str">"</span>
 					<span class="cl-txt w-wk">},</span>
 					<br>
@@ -146,42 +146,32 @@
 		<!-- Interest -->
 
 		<div id="interest" class="section">
-			<div>
-				<div class="col30">
-					<ul>
-						<li>
-							<span class="badge" onmouseover="currentDiv(1)">#liverpool</span>
-							<span class="badge" onmouseover="currentDiv(1)">#steven_gerrard</span>
-						</li>
-						<li>
-							<span class="badge" onmouseover="currentDiv(2)">#dota2</span>
-							<span class="badge" onmouseover="currentDiv(2)">#earthshaker</span>
-						</li>
-						<li>
-							<span class="badge" onmouseover="currentDiv(3)">#naruto</span>
-							<span style="display:none" class="badge" onmouseover="currentDiv(3)"></span>
-						</li>
-						<li>
-							<span class="badge" onmouseover="currentDiv(4)">#dragon_ball</span>
-							<span class="badge" onmouseover="currentDiv(4)">#songohan</span>
-						</li>
-					</ul>
-				</div>
-				<div class="col70 hide">
-					<div>
-						<img class="mySlides" alt="liverpool" src="https://wallpaperscraft.com/image/liverpool_uefa_evrofinal_england_cup_27760_1920x1080.jpg">
-						<img class="mySlides" alt="dota2" src="http://wallpapersdota2.com/wp-content/uploads/2015/02/wallpapersdota2.com-699.jpg">
-						<img class="mySlides" alt="naruto" src="http://www.the-fanboy-perspective.com/uploads/1/7/3/8/17382151/rgfesdgfes_orig.jpg">
-						<img class="mySlides" alt="dragon ball" src="http://cdn.wallpapersafari.com/70/56/hQ4VgI.jpg">
-					</div>
-				</div>
+			<div class="col30">
+				<ul>
+					<li>
+						<span class="badge" onmouseover="show(0)">#liverpool</span>
+						<span class="badge" onmouseover="show(0)">#steven_gerrard</span>
+					</li>
+					<li>
+						<span class="badge" onmouseover="show(1)">#dota2</span>
+						<span class="badge" onmouseover="show(1)">#earthshaker</span>
+					</li>
+					<li>
+						<span class="badge" onmouseover="show(2)">#naruto</span>
+						<span style="display:none" class="badge"></span>
+					</li>
+					<li>
+						<span class="badge" onmouseover="show(3)">#dragon_ball</span>
+						<span class="badge" onmouseover="show(3)">#songohan</span>
+					</li>
+				</ul>
 			</div>
 		</div>
 
 		<!-- Project -->
 
 		<div id="projects" class="section">
-			<div id="projects-container">
+			<div>
 
 				<!-- namespace Projects { -->
 
@@ -199,7 +189,7 @@
 				</span>
 
 				<!-- projects content -->
-				<p class="project" ng-repeat="project in projects" ng-show='project.place !=="School"'>
+				<p ng-repeat="project in projects" ng-show='project.place !=="School"'>
 					<span class="cl-key w-wk tab1">class</span>
 					<a target="_blank" ng-href="{{project.link}}">
 							<span class="lk-cls cl-cls project-name">{{project.name}}</span>
@@ -243,7 +233,7 @@
 					<span class="cl-txt w-wk">();</span>
 					<br>
 
-					<!-- Naruto -->
+					<!-- School project content -->
 
 					<p class="project" ng-repeat="project in projects" ng-show='project.place =="School"'>
 						<span class="cl-var tab2 w-wk">projects</span><span class="cl-txt w-wk">.</span><span class="cl-fn w-wk">Add</span>
