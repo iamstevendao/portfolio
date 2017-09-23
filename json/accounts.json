@@ -1,0 +1,28 @@
+{
+  "important": [{
+      "name": "Github",
+      "link": "https://github.com/iamstevendao"
+    },
+    {
+      "name": "Blog",
+      "link": "https://iamstevendao.github.io/blog/"
+    },
+    {
+      "name": "Twitter",
+      "link": "https://twitter.com/iamstevendao"
+    }
+  ],
+  "other": [{
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/in/steven-dao-b9a065127/"
+    },
+    {
+      "name": "Codepen",
+      "link": "https://codepen.io/iamstevendao"
+    },
+    {
+      "name": "Repl.it",
+      "link": "https://repl.it/@iamstevendao"
+    }
+  ]
+}

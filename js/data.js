@@ -15,5 +15,11 @@
       .then(function (res) {
         $scope.projects = res.data;
       });
+
+    //accounts
+    $http.get('json/accounts.json')
+      .then(function (res) {
+        $scope.accounts = res.data;
+      });
   });
 })(window.angular);
