@@ -1,6 +1,6 @@
 (function (angular) {
   'use strict';
-  var App = angular.module('data', []);
+  var App = angular.module('data', ['duScroll']);
 
   App.controller('DataController', function DataController($scope, $http) {
 
