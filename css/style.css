@@ -32,10 +32,6 @@ a {
 	text-decoration: none;
 }
 
-p {
-	opacity: 0.9;
-}
-
 
 /*coding*/
 
@@ -90,7 +86,7 @@ p {
 a>span {
 	position: relative;
 	display: inline-block;
-	font-weight: 600;
+	font-weight: 500;
 	padding: 0 1px;
 	opacity: 0.99;
 	transition: color ease 0.3s;
@@ -311,11 +307,6 @@ header img {
 #projects {
 	height: 1500px;
 	padding: 0;
-}
-
-#projects-container {
-	background-color: #1E1E1E;
-	opacity: 0.9;
 }
 
 

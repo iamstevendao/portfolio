@@ -1,17 +1,21 @@
 $(document).ready(function () {
 	var all = $(".project");
 	show(0);
-
-	$(".project-name").hover(function () {
-		var index = $(".project-name").index(this);
-		$("#projects p").css('opacity', '0.2');
-		all[index].style.opacity = 1;
-		all[index].style.backgroundColor = '#0B0B0B';
-		$("#projects").css('background-image', 'url(' + "img/projects/" + $(this).html().toLowerCase() + ".jpg)");
-	}, function () {
-		$("#projects p").css('opacity', '1');
-		$("#projects p").css('background-color', 'transparent');
-		$("#projects").css('background-image', 'none');
+	$(".project-name").on({
+		mouseenter: function () {
+			console.log("hello world");
+			var index = $(".project-name").index(this);
+			$("#projects p").css('opacity', '0.2');
+			all[index].style.opacity = 1;
+			all[index].style.backgroundColor = '#0B0B0B';
+			$("#projects").css('background-image', 'url(' + "img/projects/" + $(this).html().toLowerCase() + ".jpg)");
+		},
+		mouseleave: function () {
+			console.log("hello world");
+			$("#projects p").css('opacity', '1');
+			$("#projects p").css('background-color', 'transparent');
+			$("#projects").css('background-image', 'none');
+		}
 	});
 
 	$(".nav-bar ul li").click(function () {
