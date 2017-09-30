@@ -30,7 +30,7 @@
 			</ul>
 		</nav>
 	</header>
-	<div class="content">
+	<div class="content" ng-view>
 
 		<!-- Banner -->
 		<section id="banner">
@@ -140,25 +140,25 @@
 
 		<!-- Interest -->
 
-		<section id="interest">
+		<section id="interest" style="background:url({{current}}) ">
 			<div class="col30">
 				<ul>
 					<li>
-						<span class="badge" onmouseover="show(0)">#naruto</span>
-						<span style="display:none" class="badge"></span>
+						<span class="badge" ng-mouseover="setBackground(0)">#naruto</span>
+						<span class="badge" ng-mouseover="setBackground(0)">#hinata</span>
 					</li>
 					<li>
-						<span class="badge" onmouseover="show(1)">#liverpool</span>
-						<span class="badge" onmouseover="show(1)">#steven_gerrard</span>
+						<span class="badge" ng-mouseover="setBackground(1)">#liverpool</span>
+						<span class="badge" ng-mouseover="setBackground(1)">#steven_gerrard</span>
 					</li>
 					<li>
-						<span class="badge" onmouseover="show(2)">#dota2</span>
-						<span class="badge" onmouseover="show(2)">#earthshaker</span>
+						<span class="badge" ng-mouseover="setBackground(2)">#dota2</span>
+						<span class="badge" ng-mouseover="setBackground(2)">#earthshaker</span>
 					</li>
 
 					<li>
-						<span class="badge" onmouseover="show(3)">#dragon_ball</span>
-						<span class="badge" onmouseover="show(3)">#songohan</span>
+						<span class="badge" ng-mouseover="setBackground(3)">#dragon_ball</span>
+						<span class="badge" ng-mouseover="setBackground(3)">#songohan</span>
 					</li>
 				</ul>
 			</div>
