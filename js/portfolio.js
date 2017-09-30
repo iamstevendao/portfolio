@@ -12,10 +12,11 @@
   App.controller('PortfolioController', function DataController($scope, $http) {
     // $scope.current = url[0];
     var dots = angular.element(document.getElementsByClassName("badge"));
-    console.log(dots.length);
-
+    var prjs, prjContainer;
     angular.element(function () {
       $scope.setBackground(0, false);
+      prjs = angular.element(document.getElementsByClassName("project"));
+      prjContainer = angular.element(document.getElementById("projects"));
     });
 
     //timeline
@@ -51,6 +52,22 @@
         $scope.setBackground(n == dots.length / 2 - 1 ? 0 : ++n, false);
       }, 2000);
     };
+
+    $scope.enter = function (index) {
+      for (let i = 0; i < prjs.length; i++) {
+        prjs[i].style.opacity = 0.2;
+      }
+      prjs[index].style.opacity = 1;
+      prjs[index].style.backgroundColor = "#0B0B0B";
+    }
+
+    $scope.leave = function () {
+      for (let i = 0; i < prjs.length; i++) {
+        prjs[i].style.opacity = 1;
+        prjs[i].style.backgroundColor = "transparent";
+      }
+    }
+
     function set(dot, highlight) {
       dot.style.backgroundColor = highlight ? "white" : "black";
       dot.style.color = highlight ? "black" : "#D4D4D4";

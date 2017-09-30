@@ -143,22 +143,21 @@
 		<section id="interest" style="background-image:url({{current}}) ">
 			<div class="col30">
 				<ul>
-					<li>
-						<span class="badge" ng-mouseover="setBackground(0)">#naruto</span>
-						<span class="badge" ng-mouseover="setBackground(0)">#hinata</span>
+					<li ng-mouseover="setBackground(0)">
+						<span class="badge">#naruto</span>
+						<span class="badge">#hinata</span>
 					</li>
-					<li>
-						<span class="badge" ng-mouseover="setBackground(1)">#liverpool</span>
-						<span class="badge" ng-mouseover="setBackground(1)">#steven_gerrard</span>
+					<li ng-mouseover="setBackground(1)">
+						<span class="badge">#liverpool</span>
+						<span class="badge">#steven_gerrard</span>
 					</li>
-					<li>
-						<span class="badge" ng-mouseover="setBackground(2)">#dota2</span>
-						<span class="badge" ng-mouseover="setBackground(2)">#earthshaker</span>
+					<li ng-mouseover="setBackground(2)">
+						<span class="badge">#dota2</span>
+						<span class="badge">#earthshaker</span>
 					</li>
-
-					<li>
-						<span class="badge" ng-mouseover="setBackground(3)">#dragon_ball</span>
-						<span class="badge" ng-mouseover="setBackground(3)">#songohan</span>
+					<li ng-mouseover="setBackground(3)">
+						<span class="badge">#dragon_ball</span>
+						<span class="badge">#songohan</span>
 					</li>
 				</ul>
 			</div>
@@ -184,10 +183,10 @@
 				</span>
 
 				<!-- projects content -->
-				<p ng-repeat="project in projects" ng-show='project.place !=="School"'>
+				<p class="project" ng-repeat="project in projects" ng-show='project.place !=="School"'>
 					<span class="cl-key w-wk tab1">class</span>
 					<a ng-href="{{project.link}}">
-							<span class="lk-cls cl-cls project-name">{{project.name}}</span>
+							<span class="lk-cls cl-cls project-name" ng-mouseenter="enter($index)" ng-mouseleave="leave()">{{project.name}}</span>
 						</a>
 					<span class="cl-txt w-wk">:</span>
 					<span class="cl-cls w-wk">{{project.place}}Project</span>
@@ -230,7 +229,7 @@
 					</span>
 
 					<!-- School project content -->
-					<p class="projectx" ng-repeat="project in projects" ng-show='project.place =="School"'>
+					<p class="project" ng-repeat="project in projects" ng-show='project.place =="School"'>
 						<span class="cl-var tab2 w-wk">projects</span><span class="cl-txt w-wk">.</span><span class="cl-fn w-wk">Add</span
 						><span class="cl-txt w-wk">(</span
 						><span class="cl-key w-wk">new</span>
@@ -299,7 +298,7 @@
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script src="js/angular-smooth-scroll.js"></script>
-	<script src="js/portfolio-controller.js"></script>
+	<script src="js/portfolio.js"></script>
 </body>
 
 </html>
