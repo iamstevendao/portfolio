@@ -177,16 +177,16 @@
 				</p>
 
 				<span class="cl-cmt tab1">
-						<span>// For more projects, visit my</span>
+						<span><span class="w-wk">//</span> For more projects, visit my</span>
 				<a href="https://github.com/iamstevendao"><span class="lk-cmt">Github</span></a><span>, or <a href="https://iamstevendao.github.io/blog/projects/"><span class="lk-cmt">blog</span></a>
 				</span>
 				</span>
 
 				<!-- projects content -->
-				<p class="project" ng-repeat="project in projects" ng-show='project.place !=="School"'>
+				<p class="prj" ng-repeat="project in projects" ng-show='project.place !=="School"'>
 					<span class="cl-key w-wk tab1">class</span>
 					<a ng-href="{{project.link}}">
-							<span class="lk-cls cl-cls project-name" ng-mouseenter="enter($index)" ng-mouseleave="leave()">{{project.name}}</span>
+							<span class="lk-cls cl-cls" ng-mouseenter="enter($index)" ng-mouseleave="leave()">{{project.name}}</span>
 						</a>
 					<span class="cl-txt w-wk">:</span>
 					<span class="cl-cls w-wk">{{project.place}}Project</span>
@@ -229,13 +229,13 @@
 					</span>
 
 					<!-- School project content -->
-					<p class="project" ng-repeat="project in projects" ng-show='project.place =="School"'>
+					<p class="prj" ng-repeat="project in projects" ng-show='project.place =="School"'>
 						<span class="cl-var tab2 w-wk">projects</span><span class="cl-txt w-wk">.</span><span class="cl-fn w-wk">Add</span
 						><span class="cl-txt w-wk">(</span
 						><span class="cl-key w-wk">new</span>
 						<span class="cl-cls w-wk">Project</span><span class="cl-txt w-wk">(</span>
 						<span class="cl-str">
-						<span class="w-wk">"</span><a ng-href="{{project.link}}"><span class="lk-str project-name">{{project.name}}</span><span class="w-wk">"</span><span class="cl-txt w-wk">,</span></a>
+						<span class="w-wk">"</span><a ng-href="{{project.link}}"><span class="lk-str">{{project.name}}</span><span class="w-wk">"</span><span class="cl-txt w-wk">,</span></a>
 						</span>
 						<span ng-repeat='skill in project.skills'>
 								<span class="cl-var">{{skill}}</span><span ng-if='!$last' class="cl-txt w-wk">,</span>

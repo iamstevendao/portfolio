@@ -15,7 +15,7 @@
     var prjs, prjContainer;
     angular.element(function () {
       $scope.setBackground(0, false);
-      prjs = angular.element(document.getElementsByClassName("project"));
+      prjs = angular.element(document.getElementsByClassName("prj"));
       prjContainer = angular.element(document.getElementById("projects"));
     });
 
