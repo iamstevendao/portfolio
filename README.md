@@ -11,8 +11,8 @@
 - [d-oliveros/ngSmoothScroll](https://github.com/d-oliveros/ngSmoothScroll)
 
 - Images:
-  - [Naruto](http://www.the-fanboy-perspective.com/uploads/1/7/3/8/17382151/rgfesdgfes_orig.jpg)
+  - [Naruto](https://www.walldevil.com/wallpapers/w02/617977-evolution-naruto-chakra-mode-naruto-shippuden-running-sage-mode-uzumaki-naruto.jpg)
   - [Liverpool](https://wallpaperscraft.com/image/liverpool_uefa_evrofinal_england_cup_27760_1920x1080.jpg)
-  - [Earthshaker](http://wallpapersdota2.com/wp-content/uploads/2015/02/wallpapersdota2.com-699.jpg)
-  - [Dragonball](http://stuffpoint.com/dragonball-z-anime/image/114886-dragonball-z-anime-goku-wallpaper.jpg)
+  - [Earthshaker](https://i.ytimg.com/vi/FVFi9qwKmWk/maxresdefault.jpg)
+  - [Dragonball](https://i.ytimg.com/vi/Qd54ZrSkIw0/maxresdefault.jpg)
 
