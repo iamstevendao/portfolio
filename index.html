@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="portfolio">
 
 <head>
 	<meta charset="UTF-8" />
 	<title>Steven's Portfolio</title>
 	<base target="_blank">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="img/logo/avatar.jpg">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="js/animation.js"></script>
-	<script src="js/data.js"></script>
+
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+	<!-- <script src="js/animation.js"></script> -->
+
 </head>
 
-<body>
+<body ng-controller="PortfolioController">
 	<header>
 		<div>
 			<a href="index.html#banner">
@@ -22,17 +23,17 @@
 		</div>
 		<nav class="nav-bar">
 			<ul>
-				<li><a target="_parent" href="index.html#banner">About</a></li>
-				<li><a target="_parent" href="index.html#timeline">Timeline</a></li>
-				<li><a target="_parent" href="index.html#interest">Interest</a></li>
-				<li><a target="_parent" href="index.html#projects">Projects</a></li>
+				<li><a target="_parent" href="#" scroll-to="banner">About</a></li>
+				<li><a target="_parent" href="#" scroll-to="timeline">Timeline</a></li>
+				<li><a target="_parent" scroll-to="interest">Interest</a></li>
+				<li><a target="_parent" href="#" scroll-to="projects">Projects</a></li>
 			</ul>
 		</nav>
 	</header>
-	<div class="content" ng-app="data" ng-controller="DataController">
+	<div class="content" ng-view>
 
 		<!-- Banner -->
-		<div id="banner" class="section">
+		<section id="banner">
 			<div>
 				<p>
 					<span class="anim-typewriter cl-cmt">//me and my stuff</span>
@@ -73,11 +74,11 @@
 					</p>
 				</p>
 			</div>
-		</div>
+		</section>
 
 		<!-- Timeline -->
 
-		<div id="timeline" class="section">
+		<section id="timeline">
 			<div>
 				<span class="cl-cmt">//my timeline</span>
 				<br>
@@ -120,7 +121,7 @@
 					<span class="cl-str"><span class="w-wk">"</span>{{event.date}}<span class="w-wk">"</span></span>
 					<span class="cl-txt w-wk">,</span>
 					<span class="cl-str"><span class="w-wk">"</span>{{event.job.title}}</span><a ng-if="event.job.hasOwnProperty('place')"
-					  ng-href="{{event.job.link}}">
+					 ng-href="{{event.job.link}}">
 								<span class="cl-str lk-str"> {{event.job.place}}</span></a><span class="w-wk cl-str">"</span>
 					<span class="cl-txt w-wk">},</span>
 					<br>
@@ -135,37 +136,36 @@
 				<br>
 				<span class="cl-txt w-wk">}</span>
 			</div>
-		</div>
+		</section>
 
 		<!-- Interest -->
 
-		<div id="interest" class="section">
+		<section id="interest" style="background-image:url({{current}}) ">
 			<div class="col30">
 				<ul>
-					<li>
-						<span class="badge" onmouseover="show(0)">#naruto</span>
-						<span style="display:none" class="badge"></span>
+					<li ng-mouseover="setBackground(0)">
+						<span class="badge">#naruto</span>
+						<span class="badge">#hinata</span>
 					</li>
-					<li>
-						<span class="badge" onmouseover="show(1)">#liverpool</span>
-						<span class="badge" onmouseover="show(1)">#steven_gerrard</span>
+					<li ng-mouseover="setBackground(1)">
+						<span class="badge">#liverpool</span>
+						<span class="badge">#steven_gerrard</span>
 					</li>
-					<li>
-						<span class="badge" onmouseover="show(2)">#dota2</span>
-						<span class="badge" onmouseover="show(2)">#earthshaker</span>
+					<li ng-mouseover="setBackground(2)">
+						<span class="badge">#dota2</span>
+						<span class="badge">#earthshaker</span>
 					</li>
-
-					<li>
-						<span class="badge" onmouseover="show(3)">#dragon_ball</span>
-						<span class="badge" onmouseover="show(3)">#songohan</span>
+					<li ng-mouseover="setBackground(3)">
+						<span class="badge">#dragon_ball</span>
+						<span class="badge">#songohan</span>
 					</li>
 				</ul>
 			</div>
-		</div>
+		</section>
 
 		<!-- Project -->
 
-		<div id="projects" class="section">
+		<section id="projects">
 			<div>
 
 				<!-- namespace Projects { -->
@@ -183,10 +183,10 @@
 				</span>
 
 				<!-- projects content -->
-				<p ng-repeat="project in projects" ng-show='project.place !=="School"'>
+				<p class="project" ng-repeat="project in projects" ng-show='project.place !=="School"'>
 					<span class="cl-key w-wk tab1">class</span>
 					<a ng-href="{{project.link}}">
-							<span class="lk-cls cl-cls project-name">{{project.name}}</span>
+							<span class="lk-cls cl-cls project-name" ng-mouseenter="enter($index)" ng-mouseleave="leave()">{{project.name}}</span>
 						</a>
 					<span class="cl-txt w-wk">:</span>
 					<span class="cl-cls w-wk">{{project.place}}Project</span>
@@ -229,7 +229,7 @@
 					</span>
 
 					<!-- School project content -->
-					<p class="projectx" ng-repeat="project in projects" ng-show='project.place =="School"'>
+					<p class="project" ng-repeat="project in projects" ng-show='project.place =="School"'>
 						<span class="cl-var tab2 w-wk">projects</span><span class="cl-txt w-wk">.</span><span class="cl-fn w-wk">Add</span
 						><span class="cl-txt w-wk">(</span
 						><span class="cl-key w-wk">new</span>
@@ -253,11 +253,11 @@
 					<br>
 					<span class="cl-txt w-wk">}</span>
 			</div>
-		</div>
+		</section>
 
 		<!-- Credits -->
 
-		<div id="credit" class="section">
+		<section id="credit">
 			<div>
 				<span class="cl-cmt">//credits</span>
 				<br>
@@ -290,12 +290,15 @@
 				<br>
 				<span class="cl-txt w-wk">}</span>
 			</div>
-		</div>
+		</section>
 
 		<div class="footer">
 			<span class="anim-typewriter">&copy; Steven Dao 2017</span>
 		</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="js/angular-smooth-scroll.js"></script>
+	<script src="js/portfolio.js"></script>
 </body>
 
 </html>
