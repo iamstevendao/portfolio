@@ -11,9 +11,11 @@
   ];
   App.controller('PortfolioController', function DataController($scope, $http) {
     // $scope.current = url[0];
+    var dots = angular.element(document.getElementsByClassName("badge"));
+    console.log(dots.length);
 
     angular.element(function () {
-      $scope.setBackground(0);
+      $scope.setBackground(0, false);
     });
 
     //timeline
@@ -34,17 +36,24 @@
         $scope.accounts = res.data;
       });
 
-    $scope.setBackground = function (n) {
+    $scope.setBackground = function (n, hover = true) {
       clearTimeout(timer);
+      for (let i = 0; i < dots.length; i = i + 2) {
+        set(dots[i], false);
+      }
 
+      set(dots[n * 2], true);
       $scope.current = url[n];
-      $scope.$apply();
-      console.log("im here", n);
-      timer = setTimeout(function () {
-        $scope.setBackground(n == 8 / 2 - 1 ? 0 : ++n);
-        console.log("im inside");
-      }, 2000);
-    }
+      if (!hover)
+        $scope.$apply();
 
+      timer = setTimeout(function () {
+        $scope.setBackground(n == dots.length / 2 - 1 ? 0 : ++n, false);
+      }, 2000);
+    };
+    function set(dot, highlight) {
+      dot.style.backgroundColor = highlight ? "white" : "black";
+      dot.style.color = highlight ? "black" : "#D4D4D4";
+    }
   });
 })(window.angular);
