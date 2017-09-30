@@ -8,6 +8,7 @@
 - Code Syntax and Style: C#.
 - Code highlight, Editor background Color: [Visual Studio Code](https://code.visualstudio.com/)
 - Font: Monaco
+- [d-oliveros/ngSmoothScroll](https://github.com/d-oliveros/ngSmoothScroll)
 
 - Images:
   - [Naruto](http://www.the-fanboy-perspective.com/uploads/1/7/3/8/17382151/rgfesdgfes_orig.jpg)
