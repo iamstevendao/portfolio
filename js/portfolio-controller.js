@@ -1,8 +1,8 @@
 (function (angular) {
   'use strict';
-  var App = angular.module('data', ['duScroll']);
+  var App = angular.module('portfolio', ['smoothScroll']);
 
-  App.controller('DataController', function DataController($scope, $http) {
+  App.controller('PortfolioController', function DataController($scope, $http) {
 
     //timeline
     $http.get('json/timeline.json')

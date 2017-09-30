@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="portfolio">
 
 <head>
 	<meta charset="UTF-8" />
 	<title>Steven's Portfolio</title>
 	<base target="_blank">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="img/logo/avatar.jpg">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="https://raw.githubusercontent.com/oblador/angular-scroll/master/angular-scroll.js"></script>
+
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
 	<!-- <script src="js/animation.js"></script> -->
-	<script src="js/data.js"></script>
+
 </head>
 
-<body ng-app="data" ng-controller="DataController">
+<body ng-controller="PortfolioController">
 	<header>
 		<div>
 			<a href="index.html#banner">
 				<img src="img/logo/avatar.jpg">
 			</a>
 		</div>
-		<nav class="nav-bar" du-scroll-container="container">
+		<nav class="nav-bar">
 			<ul>
-				<li><a target="_parent" du-smooth-scroll du-scrollspy href="index.html#banner">About</a></li>
-				<li><a target="_parent" du-smooth-scroll du-scrollspy href="index.html#timeline">Timeline</a></li>
-				<li><a target="_parent" du-smooth-scroll du-scrollspy href="index.html#interest">Interest</a></li>
-				<li><a target="_parent" href="index.html#projects">Projects</a></li>
+				<li><a target="_parent" href="#" scroll-to="banner">About</a></li>
+				<li><a target="_parent" href="#" scroll-to="timeline">Timeline</a></li>
+				<li><a target="_parent" scroll-to="interest">Interest</a></li>
+				<li><a target="_parent" href="#" scroll-to="projects">Projects</a></li>
 			</ul>
 		</nav>
 	</header>
 	<div class="content">
 
 		<!-- Banner -->
-		<div id="banner" class="section" du-scroll-container>
+		<section id="banner">
 			<div>
 				<p>
 					<span class="anim-typewriter cl-cmt">//me and my stuff</span>
@@ -74,11 +74,11 @@
 					</p>
 				</p>
 			</div>
-		</div>
+		</section>
 
 		<!-- Timeline -->
 
-		<div id="timeline" class="section" du-scroll-container>
+		<section id="timeline">
 			<div>
 				<span class="cl-cmt">//my timeline</span>
 				<br>
@@ -121,7 +121,7 @@
 					<span class="cl-str"><span class="w-wk">"</span>{{event.date}}<span class="w-wk">"</span></span>
 					<span class="cl-txt w-wk">,</span>
 					<span class="cl-str"><span class="w-wk">"</span>{{event.job.title}}</span><a ng-if="event.job.hasOwnProperty('place')"
-					  ng-href="{{event.job.link}}">
+					 ng-href="{{event.job.link}}">
 								<span class="cl-str lk-str"> {{event.job.place}}</span></a><span class="w-wk cl-str">"</span>
 					<span class="cl-txt w-wk">},</span>
 					<br>
@@ -136,11 +136,11 @@
 				<br>
 				<span class="cl-txt w-wk">}</span>
 			</div>
-		</div>
+		</section>
 
 		<!-- Interest -->
 
-		<div id="interest" class="section">
+		<section id="interest">
 			<div class="col30">
 				<ul>
 					<li>
@@ -162,11 +162,11 @@
 					</li>
 				</ul>
 			</div>
-		</div>
+		</section>
 
 		<!-- Project -->
 
-		<div id="projects" class="section">
+		<section id="projects">
 			<div>
 
 				<!-- namespace Projects { -->
@@ -254,11 +254,11 @@
 					<br>
 					<span class="cl-txt w-wk">}</span>
 			</div>
-		</div>
+		</section>
 
 		<!-- Credits -->
 
-		<div id="credit" class="section">
+		<section id="credit">
 			<div>
 				<span class="cl-cmt">//credits</span>
 				<br>
@@ -291,12 +291,15 @@
 				<br>
 				<span class="cl-txt w-wk">}</span>
 			</div>
-		</div>
+		</section>
 
 		<div class="footer">
 			<span class="anim-typewriter">&copy; Steven Dao 2017</span>
 		</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="js/angular-smooth-scroll.js"></script>
+	<script src="js/portfolio-controller.js"></script>
 </body>
 
 </html>
