@@ -143,21 +143,9 @@
 						<span class="tag">What I love</span>
 						<br><br>
 					</li>
-					<li ng-mouseover="setBackground(0)">
-						<span class="tag badge">#naruto</span>
-						<span class="tag badge">#hinata</span>
-					</li>
-					<li ng-mouseover="setBackground(1)">
-						<span class="tag badge">#liverpool</span>
-						<span class="tag badge">#steven_gerrard</span>
-					</li>
-					<li ng-mouseover="setBackground(2)">
-						<span class="tag badge">#dota2</span>
-						<span class="tag badge">#earthshaker</span>
-					</li>
-					<li ng-mouseover="setBackground(3)">
-						<span class="tag badge">#dragon_ball</span>
-						<span class="tag badge">#songohan</span>
+					<li ng-repeat="interest in interests" ng-mouseover="setBackground($index)">
+						<span class="tag badge">#{{interest.name}}</span>
+						<span class="tag badge">#{{interest.name2}}</span>
 					</li>
 				</ul>
 			</div>
