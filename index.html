@@ -143,7 +143,11 @@
 						<span class="tag">What I love</span>
 						<br><br>
 					</li>
-					<li ng-mouseover="setBackground(0)">
+					<li ng-repeat="interest in interests" ng-mouseover="setBackground($index)">
+						<span class="tag badge">{{interest.name}}</span>
+						<span class="tag badge">{{interest.name2}}</span>
+					</li>
+					<!-- <li ng-mouseover="setBackground(0)">
 						<span class="tag badge">#naruto</span>
 						<span class="tag badge">#hinata</span>
 					</li>
@@ -158,7 +162,7 @@
 					<li ng-mouseover="setBackground(3)">
 						<span class="tag badge">#dragon_ball</span>
 						<span class="tag badge">#songohan</span>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		</section>

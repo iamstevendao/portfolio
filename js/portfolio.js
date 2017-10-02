@@ -3,26 +3,31 @@
   var App = angular.module('portfolio', ['smoothScroll']);
   var timer;
 
-  const url = [
-    "https://www.walldevil.com/wallpapers/w02/617977-evolution-naruto-chakra-mode-naruto-shippuden-running-sage-mode-uzumaki-naruto.jpg",
-    'https://wallpaperscraft.com/image/liverpool_uefa_evrofinal_england_cup_27760_1920x1080.jpg',
-    'https://i.ytimg.com/vi/FVFi9qwKmWk/maxresdefault.jpg',
-    'https://i.ytimg.com/vi/Qd54ZrSkIw0/maxresdefault.jpg'
-  ];
   App.controller('PortfolioController', function DataController($scope, $http) {
-    // $scope.current = url[0];
-    var dots = angular.element(document.getElementsByClassName("badge"));
-    var prjs, prjContainer;
+    var prjs, prjContainer, dots;
     angular.element(function () {
-      $scope.setBackground(0, false);
+      dots = angular.element(document.getElementsByClassName("badge"));
       prjs = angular.element(document.getElementsByClassName("prj"));
       prjContainer = angular.element(document.getElementById("projects"));
+      $scope.setBackground(0, false);
     });
+
+    //accounts
+    $http.get('json/accounts.json')
+      .then(function (res) {
+        $scope.accounts = res.data;
+      });
 
     //timeline
     $http.get('json/timeline.json')
       .then(function (res) {
         $scope.timeline = res.data;
+      });
+
+    //interest
+    $http.get('json/interest.json')
+      .then(function (res) {
+        $scope.interests = res.data;
       });
 
     //projects
@@ -31,11 +36,6 @@
         $scope.projects = res.data;
       });
 
-    //accounts
-    $http.get('json/accounts.json')
-      .then(function (res) {
-        $scope.accounts = res.data;
-      });
 
     $scope.setBackground = function (n, hover = true) {
       clearTimeout(timer);
@@ -44,7 +44,7 @@
       }
 
       set(dots[n * 2], true);
-      $scope.current = url[n];
+      $scope.current = $scope.interests[n].url;
       if (!hover)
         $scope.$apply();
 
