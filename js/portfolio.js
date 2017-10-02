@@ -9,7 +9,7 @@
       dots = angular.element(document.getElementsByClassName("badge"));
       prjs = angular.element(document.getElementsByClassName("prj"));
       prjContainer = angular.element(document.getElementById("projects"));
-      $scope.setBackground(0, false);
+      setTimeout(function () { $scope.setBackground(0, false); }, 1000);
     });
 
     //accounts
@@ -40,10 +40,10 @@
     $scope.setBackground = function (n, hover = true) {
       clearTimeout(timer);
       for (let i = 0; i < dots.length; i = i + 2) {
-        set(dots[i], false);
+        set(i, false);
       }
 
-      set(dots[n * 2], true);
+      set(n * 2, true);
       $scope.current = $scope.interests[n].url;
       if (!hover)
         $scope.$apply();
@@ -68,9 +68,9 @@
       }
     }
 
-    function set(dot, highlight) {
-      dot.style.backgroundColor = highlight ? "white" : "black";
-      dot.style.color = highlight ? "black" : "#D4D4D4";
+    function set(i, highlight) {
+      dots[i].style.backgroundColor = highlight ? "white" : "black";
+      dots[i].style.color = highlight ? "black" : "#D4D4D4";
     }
   });
 })(window.angular);
