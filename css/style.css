@@ -331,13 +331,20 @@ section>div {
 	white-space: nowrap;
 	overflow: hidden;
 	transform: translateY(-50%);
-	animation: typewriter 1.5s steps(17) 0s 1 both, blinkTextCursor 1s steps(17) infinite normal;
+}
+
+#anim-header {
+	animation: typing-header 1.5s steps(17) 0s 1 both, blinkTextCursor 1s steps(17) infinite normal;
+}
+
+#anim-footer {
+	animation: blinkTextCursor 1s steps(17) infinite normal;
 }
 
 
 /* Animation */
 
-@keyframes typewriter {
+@keyframes typing-header {
 	from {
 		width: 0;
 	}
