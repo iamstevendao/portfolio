@@ -44,24 +44,26 @@
         set(i, false);
 
       set(n * 2, true);
-      $scope.current = $scope.interests[n].url;
+      $scope.bgInterest = $scope.interests[n].url;
       if (!hover)
         $scope.$apply();
 
       timer = setTimeout(function () {
         $scope.setBackground(n == dots.length / 2 - 1 ? 0 : ++n, false);
-      }, 2000);
+      }, 3000);
     };
 
     //mouse enter the project name
     $scope.enter = function (index) {
       blurAll();
+      $scope.bgProject = $scope.projects[index].image;
       prjs[index].style.opacity = 1;
       prjs[index].style.backgroundColor = "#0B0B0B";
     }
 
     //mouse leave the project name
     $scope.leave = function () {
+      $scope.bgProject = "none";
       blurAll(false);
     }
 
