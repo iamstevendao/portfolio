@@ -4,13 +4,6 @@
   var timer;
 
   App.controller('PortfolioController', function DataController($scope, $http) {
-    var prjs, prjContainer, dots;
-    angular.element(function () {
-      dots = angular.element(document.getElementsByClassName("badge"));
-      prjs = angular.element(document.getElementsByClassName("prj"));
-      prjContainer = angular.element(document.getElementById("projects"));
-      setTimeout(function () { $scope.setBackground(0, false); }, 1000);
-    });
 
     //accounts
     $http.get('json/accounts.json')
@@ -36,12 +29,19 @@
         $scope.projects = res.data;
       });
 
+    //interest and project effects
+    var prjs, prjContainer, dots;
+    angular.element(function () {
+      dots = angular.element(document.getElementsByClassName("badge"));
+      prjs = angular.element(document.getElementsByClassName("prj"));
+      prjContainer = angular.element(document.getElementById("projects"));
+      $scope.setBackground(0, false);
+    });
 
     $scope.setBackground = function (n, hover = true) {
       clearTimeout(timer);
-      for (let i = 0; i < dots.length; i = i + 2) {
+      for (let i = 0; i < dots.length; i = i + 2)
         set(i, false);
-      }
 
       set(n * 2, true);
       $scope.current = $scope.interests[n].url;
@@ -53,18 +53,22 @@
       }, 2000);
     };
 
+    //mouse enter the project name
     $scope.enter = function (index) {
-      for (let i = 0; i < prjs.length; i++) {
-        prjs[i].style.opacity = 0.2;
-      }
+      blurAll();
       prjs[index].style.opacity = 1;
       prjs[index].style.backgroundColor = "#0B0B0B";
     }
 
+    //mouse leave the project name
     $scope.leave = function () {
+      blurAll(false);
+    }
+
+    function blurAll(blur = true) {
       for (let i = 0; i < prjs.length; i++) {
-        prjs[i].style.opacity = 1;
         prjs[i].style.backgroundColor = "transparent";
+        prjs[i].style.opacity = blur ? 0.2 : 1;
       }
     }
 
