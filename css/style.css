@@ -194,7 +194,7 @@ header img {
 
 .content {
 	margin: 0 auto;
-	min-width: 1000px;
+	min-width: 1020px;
 }
 
 section {
@@ -241,7 +241,7 @@ section>div {
 /*timeline*/
 
 #timeline {
-	height: 1000px;
+	height: 1050px;
 }
 
 
@@ -305,7 +305,7 @@ section>div {
 /*projects*/
 
 #projects {
-	height: 1500px;
+	height: 1600px;
 	padding: 0;
 }
 

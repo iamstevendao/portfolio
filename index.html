@@ -114,12 +114,12 @@
 				<!-- Timeline Content -->
 				<p ng-repeat="event in timeline">
 					<span class="cl-txt tab2 w-wk">{</span>
-					<span class="cl-str"><span class="w-wk">"</span>{{event.date}}<span class="w-wk">"</span></span>
-					<span class="cl-txt w-wk">,</span>
-					<span class="cl-str"><span class="w-wk">"</span>{{event.job.title}}</span><a ng-if="event.job.hasOwnProperty('place')"
-					 ng-href="{{event.job.link}}">
-								<span class="cl-str lk-str"> {{event.job.place}}</span></a><span class="w-wk cl-str">"</span>
-					<span class="cl-txt w-wk">},</span>
+					<span class="cl-str"><span class="w-wk">"</span>{{event.date}}<span class="w-wk">"<span class="cl-txt">,</span></span>
+					</span>
+					<span class="cl-str"><span class="w-wk">"</span>{{event.job.title}}</span>
+					<a ng-if="event.job.hasOwnProperty('place')" ng-href="{{event.job.link}}">
+					<span class="cl-str lk-str"> {{event.job.place}}</span></a><span class="w-wk cl-str">"</span>
+					<span class="cl-txt w-wk">}<span ng-if='!$last'>,</span></span>
 					<br>
 					<span class="cl-cmt" ng-repeat="desc in event.description">
 								<span class="tab2 w-wk">//</span>
@@ -162,13 +162,13 @@
 					<span class="cl-cls">Projects</span>
 					<br>
 					<span class="cl-txt w-wk">{</span>
+					<br>
+					<span class="cl-cmt tab1">
+								<span><span class="w-wk">//</span> For more projects, visit my</span>
+					<a href="https://github.com/iamstevendao"><span class="lk-cmt">Github</span></a><span>, or <a href="https://iamstevendao.github.io/blog/projects/"><span class="lk-cmt">blog</span></a>
+					</span>
+					</span>
 				</p>
-
-				<span class="cl-cmt tab1">
-						<span><span class="w-wk">//</span> For more projects, visit my</span>
-				<a href="https://github.com/iamstevendao"><span class="lk-cmt">Github</span></a><span>, or <a href="https://iamstevendao.github.io/blog/projects/"><span class="lk-cmt">blog</span></a>
-				</span>
-				</span>
 
 				<!-- projects content -->
 				<p class="prj" ng-repeat="project in projects" ng-show='project.place !=="School"'>
