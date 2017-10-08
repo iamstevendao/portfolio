@@ -1,32 +1,15 @@
 (function (angular) {
   'use strict'
-  var App = angular.module('portfolio', ['smoothScroll'])
+  var App = angular.module('portfolio', ['smoothScroll', 'data'])
   var timer
 
-  App.controller('PortfolioController', function DataController($scope, $http) {
-    // accounts
-    $http.get('json/accounts.json')
-      .then(function (res) {
-        $scope.accounts = res.data
-      })
-
-    // timeline
-    $http.get('json/timeline.json')
-      .then(function (res) {
-        $scope.timeline = res.data
-      })
-
-    // interest
-    $http.get('json/interest.json')
-      .then(function (res) {
-        $scope.interests = res.data
-      })
-
-    // projects
-    $http.get('json/projects.json')
-      .then(function (res) {
-        $scope.projects = res.data
-      })
+  App.controller('PortfolioController', ['dataController', '$scope', function PortfolioController (dataController, $scope, $http) {
+    dataController.request().then(function (res) {
+      $scope.accounts = res[0].data
+      $scope.timeline = res[1].data
+      $scope.interests = res[2].data
+      $scope.projects = res[3].data
+    })
 
     // interest and project effects
     var prjs, prjContainer, dots
@@ -64,16 +47,16 @@
       blurAll(false)
     }
 
-    function blurAll(blur = true) {
+    function blurAll (blur = true) {
       for (let i = 0; i < prjs.length; i++) {
         prjs[i].style.backgroundColor = 'transparent'
         prjs[i].style.opacity = blur ? 0.2 : 1
       }
     }
 
-    function set(i, highlight) {
+    function set (i, highlight) {
       dots[i].style.backgroundColor = highlight ? 'white' : 'black'
       dots[i].style.color = highlight ? 'black' : '#D4D4D4'
     }
-  })
+  }])
 })(window.angular)

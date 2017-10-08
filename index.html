@@ -19,10 +19,18 @@
 		</div>
 		<nav class="nav-bar">
 			<ul>
-				<li><a target="_parent" href="#" scroll-to="banner">About</a></li>
-				<li><a target="_parent" href="#" scroll-to="timeline">Timeline</a></li>
-				<li><a target="_parent" href="#" scroll-to="projects">Projects</a></li>
-				<li><a href="https://iamstevendao.github.io/blog">Blog</a></li>
+				<li>
+					<a target="_parent" href="#" scroll-to="banner">About</a>
+				</li>
+				<li>
+					<a target="_parent" href="#" scroll-to="timeline">Timeline</a>
+				</li>
+				<li>
+					<a target="_parent" href="#" scroll-to="projects">Projects</a>
+				</li>
+				<li>
+					<a href="https://iamstevendao.github.io/blog">Blog</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -39,20 +47,23 @@
 					<span class="cl-txt">StevenDao</span>
 					<span class="cl-txt w-wk">=</span>
 					<span class="cl-key w-wk">new </span>
-					<span class="cl-cls w-wk">Portfolio</span
-					><span class="cl-txt w-wk">()<br>{</span>
+					<span class="cl-cls w-wk">Portfolio</span>
+					<span class="cl-txt w-wk">()
+						<br>{</span>
 					<br>
 
 					<!-- About = new About[] { Github, Blog, Twitter };  -->
 					<span class="cl-var tab1 w-wk">About</span>
 					<span class="cl-txt w-wk">=</span>
 					<span class="cl-key w-wk">new</span>
-					<span class="cl-cls w-wk">About</span
-					><span class="cl-txt w-wk">[]</span>
+					<span class="cl-cls w-wk">About</span>
+					<span class="cl-txt w-wk">[]</span>
 					<span class="w-wk cl-txt">{</span>
 					<span class="cl-txt" ng-repeat="account in accounts.important">
-						<a ng-href="{{account.link}}"><span class="lk-txt">{{account.name}}</span><span class="w-wk" ng-if="!$last">,</span>
-					</a>
+						<a ng-href="{{account.link}}">
+							<span class="lk-txt">{{account.name}}</span>
+							<span class="w-wk" ng-if="!$last">,</span>
+						</a>
 					</span>
 					<span class="w-wk cl-txt">};</span>
 
@@ -61,9 +72,9 @@
 						<span class="cl-cmt tab1">//Or find me at:</span>
 						<span class="cl-cmt" ng-repeat="account in accounts.other">
 							<a ng-href="{{account.link}}">
-									<span class="lk-cmt">{{account.name}}</span
-									><span class="w-wk" ng-if="!$last">,</span>
-						</a>
+								<span class="lk-cmt">{{account.name}}</span>
+								<span class="w-wk" ng-if="!$last">,</span>
+							</a>
 						</span>
 						<br>
 						<span class="cl-txt w-wk">}</span>
@@ -90,23 +101,23 @@
 				<!-- Dictionary<string , string> Events = new Dictionary<string , string> () { -->
 
 				<span class="w-wk tab1">
-				<span class="cl-cls">Dictionary</span
-				><span class="cl-txt">&lt;</span
-				><span class="cl-key">string</span
-				><span class="cl-txt">,</span>
-				<span class="cl-key">string</span
-				><span class="cl-txt">&gt;</span>
+					<span class="cl-cls">Dictionary</span>
+					<span class="cl-txt">&lt;</span>
+					<span class="cl-key">string</span>
+					<span class="cl-txt">,</span>
+					<span class="cl-key">string</span>
+					<span class="cl-txt">&gt;</span>
 				</span>
 				<span class="cl-txt">Events</span>
 				<span class="w-wk">
-				<span class="cl-txt">=</span>
-				<span class="cl-key">new</span>
-				<span class="cl-cls">Dictionary</span
-				><span class="cl-txt">&lt;</span
-				><span class="cl-key">string</span
-				><span class="cl-txt">,</span>
-				<span class="cl-key">string</span
-				><span class="cl-txt">&gt;()</span>
+					<span class="cl-txt">=</span>
+					<span class="cl-key">new</span>
+					<span class="cl-cls">Dictionary</span>
+					<span class="cl-txt">&lt;</span>
+					<span class="cl-key">string</span>
+					<span class="cl-txt">,</span>
+					<span class="cl-key">string</span>
+					<span class="cl-txt">&gt;()</span>
 				</span>
 				<br>
 				<span class="cl-txt w-wk tab1">{</span>
@@ -114,17 +125,26 @@
 				<!-- Timeline Content -->
 				<p ng-repeat="event in timeline">
 					<span class="cl-txt tab2 w-wk">{</span>
-					<span class="cl-str"><span class="w-wk">"</span>{{event.date}}<span class="w-wk">"<span class="cl-txt">,</span></span>
+					<span class="cl-str">
+						<span class="w-wk">"</span>{{event.date}}
+						<span class="w-wk">"
+							<span class="cl-txt">,</span>
+						</span>
 					</span>
-					<span class="cl-str"><span class="w-wk">"</span>{{event.job.title}}</span>
+					<span class="cl-str">
+						<span class="w-wk">"</span>{{event.job.title}}</span>
 					<a ng-if="event.job.hasOwnProperty('place')" ng-href="{{event.job.link}}">
-					<span class="cl-str lk-str"> {{event.job.place}}</span></a><span class="w-wk cl-str">"</span>
-					<span class="cl-txt w-wk">}<span ng-if='!$last'>,</span></span>
+						<span class="cl-str lk-str"> {{event.job.place}}</span>
+					</a>
+					<span class="w-wk cl-str">"</span>
+					<span class="cl-txt w-wk">}
+						<span ng-if='!$last'>,</span>
+					</span>
 					<br>
 					<span class="cl-cmt" ng-repeat="desc in event.description">
-								<span class="tab2 w-wk">//</span>
-					<span>{{desc}}</span>
-					<br>
+						<span class="tab2 w-wk">//</span>
+						<span>{{desc}}</span>
+						<br>
 					</span>
 				</p>
 
@@ -141,7 +161,8 @@
 				<ul>
 					<li>
 						<span class="tag">What I love</span>
-						<br><br>
+						<br>
+						<br>
 					</li>
 					<li ng-repeat="interest in interests" ng-mouseover="setBackground($index)">
 						<span class="tag badge">#{{interest.name}}</span>
@@ -164,9 +185,16 @@
 					<span class="cl-txt w-wk">{</span>
 					<br>
 					<span class="cl-cmt tab1">
-								<span><span class="w-wk">//</span> For more projects, visit my</span>
-					<a href="https://github.com/iamstevendao"><span class="lk-cmt">Github</span></a><span>, or <a href="https://iamstevendao.github.io/blog/projects/"><span class="lk-cmt">blog</span></a>
-					</span>
+						<span>
+							<span class="w-wk">//</span> For more projects, visit my</span>
+						<a href="https://github.com/iamstevendao">
+							<span class="lk-cmt">Github</span>
+						</a>
+						<span>, or
+							<a href="https://iamstevendao.github.io/blog/projects/">
+								<span class="lk-cmt">blog</span>
+							</a>
+						</span>
 					</span>
 				</p>
 
@@ -174,8 +202,8 @@
 				<p class="prj" ng-repeat="project in projects" ng-show='project.place !=="School"'>
 					<span class="cl-key w-wk tab1">class</span>
 					<a ng-href="{{project.link}}">
-							<span class="lk-cls cl-cls" ng-mouseenter="enter($index)" ng-mouseleave="leave()">{{project.name}}</span>
-						</a>
+						<span class="lk-cls cl-cls" ng-mouseenter="enter($index)" ng-mouseleave="leave()">{{project.name}}</span>
+					</a>
 					<span class="cl-txt w-wk">:</span>
 					<span class="cl-cls w-wk">{{project.place}}Project</span>
 					<span class="cl-txt w-wk">{</span>
@@ -183,14 +211,15 @@
 					<span class="cl-cls tab2 w-wk">Skills</span>
 					<span class="cl-txt w-wk">skills[] = {</span>
 					<span ng-repeat="skill in project.skills">
-						<span class="cl-var">{{skill}}</span><span ng-if="!$last" class="cl-txt w-wk">,</span>
+						<span class="cl-var">{{skill}}</span>
+						<span ng-if="!$last" class="cl-txt w-wk">,</span>
 					</span>
 					<span class="cl-txt w-wk">};</span>
 					<br>
 					<span class="cl-cmt" ng-repeat="desc in project.description">
-							<span class="tab2 w-wk">//</span>
-					<span>{{desc}}</span>
-					<br>
+						<span class="tab2 w-wk">//</span>
+						<span>{{desc}}</span>
+						<br>
 					</span>
 					<span class="cl-txt tab1 w-wk">}</span>
 				</p>
@@ -203,37 +232,46 @@
 					<span class="cl-txt w-wk">{</span>
 					<br>
 					<span class="w-wk">
-					<span class="cl-cls tab2">List</span
-					><span class="cl-txt">&lt;</span
-					><span class="cl-cls">Project</span
-					><span class="cl-txt">&gt;</span>
-					<span class="cl-txt">projects =</span>
-					<span class="cl-key">new</span>
-					<span class="cl-cls">List</span
-					><span class="cl-txt">&lt;</span
-					><span class="cl-cls">Project</span
-					><span class="cl-txt">&gt;</span
-					><span class="cl-txt">();</span>
+						<span class="cl-cls tab2">List</span>
+						<span class="cl-txt">&lt;</span>
+						<span class="cl-cls">Project</span>
+						<span class="cl-txt">&gt;</span>
+						<span class="cl-txt">projects =</span>
+						<span class="cl-key">new</span>
+						<span class="cl-cls">List</span>
+						<span class="cl-txt">&lt;</span>
+						<span class="cl-cls">Project</span>
+						<span class="cl-txt">&gt;</span>
+						<span class="cl-txt">();</span>
 					</span>
 
 					<!-- School project content -->
 					<p class="prj" ng-repeat="project in projects" ng-show='project.place =="School"'>
-						<span class="cl-var tab2 w-wk">projects</span><span class="cl-txt w-wk">.</span><span class="cl-fn w-wk">Add</span
-						><span class="cl-txt w-wk">(</span
-						><span class="cl-key w-wk">new</span>
-						<span class="cl-cls w-wk">Project</span><span class="cl-txt w-wk">(</span>
+						<span class="cl-var tab2 w-wk">projects</span>
+						<span class="cl-txt w-wk">.</span>
+						<span class="cl-fn w-wk">Add</span>
+						<span class="cl-txt w-wk">(</span>
+						<span class="cl-key w-wk">new</span>
+						<span class="cl-cls w-wk">Project</span>
+						<span class="cl-txt w-wk">(</span>
 						<span class="cl-str">
-						<span class="w-wk">"</span><a ng-href="{{project.link}}"><span class="lk-str">{{project.name}}</span><span class="w-wk">"</span><span class="cl-txt w-wk">,</span></a>
+							<span class="w-wk">"</span>
+							<a ng-href="{{project.link}}">
+								<span class="lk-str">{{project.name}}</span>
+								<span class="w-wk">"</span>
+								<span class="cl-txt w-wk">,</span>
+							</a>
 						</span>
 						<span ng-repeat='skill in project.skills'>
-								<span class="cl-var">{{skill}}</span><span ng-if='!$last' class="cl-txt w-wk">,</span>
+							<span class="cl-var">{{skill}}</span>
+							<span ng-if='!$last' class="cl-txt w-wk">,</span>
 						</span>
 						<span class="cl-txt w-wk">));</span>
 						<br>
 						<span class="cl-cmt" ng-repeat="desc in project.description">
-								<span class="tab2 w-wk">//</span>
-						<span>{{desc}}</span>
-						<br>
+							<span class="tab2 w-wk">//</span>
+							<span>{{desc}}</span>
+							<br>
 						</span>
 					</p>
 
@@ -250,30 +288,37 @@
 				<span class="cl-cmt">//credits</span>
 				<br>
 				<span class="cl-key w-wk">public void</span>
-				<span class="cl-fn w-wk">Get</span
-				><span class="cl-fn">Credits</span
-				><span class="cl-txt w-wk">() {</span>
+				<span class="cl-fn w-wk">Get</span>
+				<span class="cl-fn">Credits</span>
+				<span class="cl-txt w-wk">() {</span>
 				<br>
 				<span class="cl-key w-wk tab1">string</span>
 				<span class="cl-txt">author
 					<span class="w-wk">=</span>
 				</span>
-				<span class="cl-str"><span class="w-wk">"</span>Steven Dao<span class="w-wk">"</span></span><span class="cl-txt w-wk">;</span>
+				<span class="cl-str">
+					<span class="w-wk">"</span>Steven Dao
+					<span class="w-wk">"</span>
+				</span>
+				<span class="cl-txt w-wk">;</span>
 				<br>
 				<span class="cl-key w-wk tab1">var</span>
 				<span class="cl-txt">credits
 					<span class="w-wk">=</span>
 				</span>
 				<a href="https://github.com/iamstevendao/portfolio/blob/master/README.md">
-					<span class="cl-var lk-var">README.md</span><span class="cl-txt w-wk">;</span>
+					<span class="cl-var lk-var">README.md</span>
+					<span class="cl-txt w-wk">;</span>
 				</a>
 				<br>
 				<span class="cl-key w-wk tab1">var</span>
 				<span class="cl-txt">sourceCode
 					<span class="w-wk">=</span>
 				</span>
-				<a href="https://github.com/iamstevendao/portfolio"><span class="cl-var lk-var">iamstevendao/portfolio</span><span
-				  class="cl-txt w-wk">;</span></a>
+				<a href="https://github.com/iamstevendao/portfolio">
+					<span class="cl-var lk-var">iamstevendao/portfolio</span>
+					<span class="cl-txt w-wk">;</span>
+				</a>
 
 				<br>
 				<span class="cl-txt w-wk">}</span>
@@ -286,6 +331,7 @@
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script src="js/angular-smooth-scroll.js"></script>
+	<script src="js/data.js"></script>
 	<script src="js/portfolio.js"></script>
 </body>
 
