@@ -2,12 +2,17 @@
   'use strict'
   angular.module('data', [])
     .factory('dataController', ['$q', '$http', function ($q, $http) {
-      let reqAccounts = $http.get('json/accounts.json', { cache: false })
-      let reqTimeline = $http.get('json/timeline.json', { cache: false })
-      let reqInterest = $http.get('json/interest.json', { cache: false })
-      let reqProjects = $http.get('json/projects.json', { cache: false })
+      let requests = []
+      let contents = ['accounts', 'timeline', 'interest', 'projects']
+
+      // create requests
+      contents.forEach((value) => {
+        requests.push($http.get('json/' + value + '.json', { cache: false }))
+      })
+
+      // request function
       var request = function () {
-        return $q.all([reqAccounts, reqTimeline, reqInterest, reqProjects])
+        return $q.all(requests)
           .then(function (data) {
             return data
           })

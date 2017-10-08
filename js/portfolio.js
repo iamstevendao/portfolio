@@ -4,6 +4,7 @@
   var timer
 
   App.controller('PortfolioController', ['dataController', '$scope', function PortfolioController (dataController, $scope, $http) {
+    // retrieve data
     dataController.request().then(function (res) {
       $scope.accounts = res[0].data
       $scope.timeline = res[1].data
