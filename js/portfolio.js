@@ -1,23 +1,19 @@
 (function (angular) {
   'use strict'
   var App = angular.module('portfolio', ['smoothScroll', 'data'])
-  var timer
 
-  App.controller('PortfolioController', ['dataController', '$scope', function PortfolioController (dataController, $scope, $http) {
+  App.controller('PortfolioController', ['dataController', '$scope', '$document', function PortfolioController (dataController, $scope, $http, $document) {
+    var prjs, dots, prjContainer
+    var timer
+
     // retrieve data
     dataController.request().then(function (res) {
-      $scope.accounts = res[0].data
-      $scope.timeline = res[1].data
-      $scope.interests = res[2].data
-      $scope.projects = res[3].data
+      initializeComponents(res)
     })
 
     // interest and project effects
-    var prjs, prjContainer, dots
+
     angular.element(function () {
-      dots = angular.element(document.getElementsByClassName('badge'))
-      prjs = angular.element(document.getElementsByClassName('prj'))
-      prjContainer = angular.element(document.getElementById('projects'))
       $scope.setBackground(0, false)
     })
 
@@ -30,7 +26,7 @@
       if (!hover) { $scope.$apply() }
 
       timer = setTimeout(function () {
-        $scope.setBackground(n == dots.length / 2 - 1 ? 0 : ++n, false)
+        $scope.setBackground(n === dots.length / 2 - 1 ? 0 : ++n, false)
       }, 3000)
     }
 
@@ -58,6 +54,33 @@
     function set (i, highlight) {
       dots[i].style.backgroundColor = highlight ? 'white' : 'black'
       dots[i].style.color = highlight ? 'black' : '#D4D4D4'
+    }
+
+    function initializeComponents (res) {
+      // get data only from the response and pass to initializeData
+      initializeData(res.map((value) => (value.data)))
+
+      initializeElements()
+
+      startBackground()
+    }
+
+    function startBackground () {
+      $scope.setBackground(0, false)
+    }
+
+    function initializeData (data) {
+      $scope.accounts = data[0]
+      $scope.timeline = data[1]
+      $scope.interests = data[2]
+      $scope.projects = data[3]
+    }
+
+    function initializeElements () {
+      dots = angular.element(document.querySelector('.badge'))
+      console.log(dots)
+      prjs = angular.element(document.getElementsByClassName('prj'))
+      prjContainer = angular.element(document.getElementById('projects'))
     }
   }])
 })(window.angular)
