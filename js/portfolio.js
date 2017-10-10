@@ -2,22 +2,22 @@
   'use strict'
   var App = angular.module('portfolio', ['smoothScroll', 'data'])
 
-  App.controller('PortfolioController', ['dataController', '$scope', '$document', function PortfolioController (dataController, $scope, $http, $document) {
-    var prjs, dots, prjContainer
-    var timer
+  App.controller('PortfolioController', ['dataController', '$scope', function PortfolioController (dataController, $scope) {
+    var prjs = [], dots = [], timer = []
 
     // retrieve data
-    dataController.request().then(function (res) {
-      initializeComponents(res)
+    dataController.request().then((res) => {
+      // get data only from the response and pass to initializeData
+      initializeData(res.map((value) => (value.data)))
     })
 
-    // interest and project effects
-
-    angular.element(function () {
-      $scope.setBackground(0, false)
+    angular.element(() => {
+      // initialize elemnts and start changing the background of interests
+      initializeElements()
+      startBackground()
     })
 
-    $scope.setBackground = function (n, hover = true) {
+    $scope.setBackground = (n, hover = true) => {
       clearTimeout(timer)
       for (let i = 0; i < dots.length; i = i + 2) { set(i, false) }
 
@@ -25,13 +25,13 @@
       $scope.bgInterest = $scope.interests[n].url
       if (!hover) { $scope.$apply() }
 
-      timer = setTimeout(function () {
+      timer = setTimeout(() => {
         $scope.setBackground(n === dots.length / 2 - 1 ? 0 : ++n, false)
       }, 3000)
     }
 
     // mouse enter the project name
-    $scope.enter = function (index) {
+    $scope.enter = (index) => {
       blurAll()
       $scope.bgProject = $scope.projects[index].image
       prjs[index].style.opacity = 1
@@ -39,7 +39,7 @@
     }
 
     // mouse leave the project name
-    $scope.leave = function () {
+    $scope.leave = () => {
       $scope.bgProject = 'none'
       blurAll(false)
     }
@@ -56,15 +56,6 @@
       dots[i].style.color = highlight ? 'black' : '#D4D4D4'
     }
 
-    function initializeComponents (res) {
-      // get data only from the response and pass to initializeData
-      initializeData(res.map((value) => (value.data)))
-
-      initializeElements()
-
-      startBackground()
-    }
-
     function startBackground () {
       $scope.setBackground(0, false)
     }
@@ -77,10 +68,8 @@
     }
 
     function initializeElements () {
-      dots = angular.element(document.querySelector('.badge'))
-      console.log(dots)
+      dots = angular.element(document.getElementsByClassName('badge'))
       prjs = angular.element(document.getElementsByClassName('prj'))
-      prjContainer = angular.element(document.getElementById('projects'))
     }
   }])
 })(window.angular)
