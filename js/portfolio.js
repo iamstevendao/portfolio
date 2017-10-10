@@ -3,7 +3,7 @@
   var App = angular.module('portfolio', ['smoothScroll', 'data'])
 
   App.controller('PortfolioController', ['dataController', '$scope', function PortfolioController (dataController, $scope) {
-    var prjs = [], dots = [], timer = []
+    var prjs = [], prjAdd = [], dots = [], timer = []
 
     // retrieve data
     dataController.request().then((res) => {
@@ -32,8 +32,8 @@
 
     // mouse enter the project name
     $scope.enter = (index) => {
-      blurAll()
-      $scope.bgProject = $scope.projects[index].image
+      setBlur()
+      $scope.bgProject = $scope.projects[index].image || 'none'
       prjs[index].style.opacity = 1
       prjs[index].style.backgroundColor = '#0B0B0B'
     }
@@ -41,14 +41,17 @@
     // mouse leave the project name
     $scope.leave = () => {
       $scope.bgProject = 'none'
-      blurAll(false)
+      setBlur(false)
     }
 
-    function blurAll (blur = true) {
+    function setBlur (blur = true) {
+      const opacity = blur ? 0.2 : 1
       for (let i = 0; i < prjs.length; i++) {
         prjs[i].style.backgroundColor = 'transparent'
-        prjs[i].style.opacity = blur ? 0.2 : 1
+        prjs[i].style.opacity = opacity
       }
+      for (let i = 0; i < prjAdd.length; i++)
+        prjAdd[i].style.opacity = opacity
     }
 
     function set (i, highlight) {
@@ -70,6 +73,7 @@
     function initializeElements () {
       dots = angular.element(document.getElementsByClassName('badge'))
       prjs = angular.element(document.getElementsByClassName('prj'))
+      prjAdd = angular.element(document.getElementsByClassName('prj-add')) // additional elements in project
     }
   }])
 })(window.angular)
