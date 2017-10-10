@@ -178,7 +178,7 @@
 			<div>
 
 				<!-- namespace Projects { -->
-				<p>
+				<p class="prj-add">
 					<span class="cl-key w-wk">namespace</span>
 					<span class="cl-cls">Projects</span>
 					<br>
@@ -226,10 +226,11 @@
 
 				<!-- SchoolProjects -->
 
-				<p>
+				<p class="prj-add">
 					<span class="cl-key w-wk tab1">class</span>
 					<span class="cl-cls">SchoolProjects</span>
-					<span class="cl-txt w-wk">{</span>
+					<br>
+					<span class="cl-txt w-wk tab1">{</span>
 					<br>
 					<span class="w-wk">
 						<span class="cl-cls tab2">List</span>
@@ -244,40 +245,41 @@
 						<span class="cl-txt">&gt;</span>
 						<span class="cl-txt">();</span>
 					</span>
+				</p>
 
-					<!-- School project content -->
-					<p class="prj" ng-repeat="project in projects" ng-show='project.place =="School"'>
-						<span class="cl-var tab2 w-wk">projects</span>
-						<span class="cl-txt w-wk">.</span>
-						<span class="cl-fn w-wk">Add</span>
-						<span class="cl-txt w-wk">(</span>
-						<span class="cl-key w-wk">new</span>
-						<span class="cl-cls w-wk">Project</span>
-						<span class="cl-txt w-wk">(</span>
-						<span class="cl-str">
+				<!-- School project content -->
+				<p class="prj" ng-repeat="project in projects" ng-show='project.place =="School"'>
+					<span class="cl-var tab2 w-wk">projects</span>
+					<span class="cl-txt w-wk">.</span>
+					<span class="cl-fn w-wk">Add</span>
+					<span class="cl-txt w-wk">(</span>
+					<span class="cl-key w-wk">new</span>
+					<span class="cl-cls w-wk">Project</span>
+					<span class="cl-txt w-wk">(</span>
+					<span class="cl-str">
+						<span class="w-wk">"</span>
+						<a ng-href="{{project.link}}">
+							<span class="lk-str">{{project.name}}</span>
 							<span class="w-wk">"</span>
-							<a ng-href="{{project.link}}">
-								<span class="lk-str">{{project.name}}</span>
-								<span class="w-wk">"</span>
-								<span class="cl-txt w-wk">,</span>
-							</a>
-						</span>
-						<span ng-repeat='skill in project.skills'>
-							<span class="cl-var">{{skill}}</span>
-							<span ng-if='!$last' class="cl-txt w-wk">,</span>
-						</span>
-						<span class="cl-txt w-wk">));</span>
-						<br>
-						<span class="cl-cmt" ng-repeat="desc in project.description">
-							<span class="tab2 w-wk">//</span>
-							<span>{{desc}}</span>
-							<br>
-						</span>
-					</p>
-
-					<span class="cl-txt tab1 w-wk">}</span>
+							<span class="cl-txt w-wk">,</span>
+						</a>
+					</span>
+					<span ng-repeat='skill in project.skills'>
+						<span class="cl-var">{{skill}}</span>
+						<span ng-if='!$last' class="cl-txt w-wk">,</span>
+					</span>
+					<span class="cl-txt w-wk">));</span>
 					<br>
-					<span class="cl-txt w-wk">}</span>
+					<span class="cl-cmt" ng-repeat="desc in project.description">
+						<span class="tab2 w-wk">//</span>
+						<span>{{desc}}</span>
+						<br>
+					</span>
+				</p>
+
+				<span class="cl-txt tab1 w-wk">}</span>
+				<br>
+				<span class="cl-txt w-wk">}</span>
 			</div>
 		</section>
 
