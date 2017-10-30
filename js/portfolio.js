@@ -9,13 +9,14 @@
     dataController.request().then((res) => {
       // get data only from the response and pass to initializeData
       initializeData(res.map((value) => (value.data)))
+      $scope.$apply()
     })
 
-    angular.element(() => {
+    $scope.ready = () => {
       // initialize elemnts and start changing the background of interests
       initializeElements()
       startBackground()
-    })
+    }
 
     $scope.setBackground = (n, hover = true) => {
       clearTimeout(timer)
