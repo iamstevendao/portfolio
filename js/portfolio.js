@@ -12,17 +12,17 @@
       $scope.$apply()
     })
 
-    $scope.ready = () => {
+    angular.element(() => {
       // initialize elemnts and start changing the background of interests
       initializeElements()
       startBackground()
-    }
+    })
 
     $scope.setBackground = (n, hover = true) => {
       clearTimeout(timer)
-      for (let i = 0; i < dots.length; i = i + 2) { set(i, false) }
+      for (let i = 0; i < dots.length; i = i + 2) { highlightBadge(i, false) }
 
-      set(n * 2, true)
+      highlightBadge(n * 2, true)
       $scope.bgInterest = $scope.interests[n].url
       if (!hover) { $scope.$apply() }
 
@@ -55,7 +55,7 @@
         prjAdd[i].style.opacity = opacity
     }
 
-    function set (i, highlight) {
+    function highlightBadge (i, highlight) {
       dots[i].style.backgroundColor = highlight ? 'white' : 'black'
       dots[i].style.color = highlight ? 'black' : '#D4D4D4'
     }
