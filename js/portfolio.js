@@ -9,13 +9,20 @@
     dataController.request().then((res) => {
       // get data only from the response and pass to initializeData
       initializeData(res.map((value) => (value.data)))
-      $scope.$apply()
     })
 
     angular.element(() => {
-      // initialize elemnts and start changing the background of interests
-      initializeElements()
-      startBackground()
+      // all elements is loaded
+      // re-initialize elements until they are surely loaded
+      let i = setInterval(() => {
+        initializeElements()
+        if (dots) {
+          // if done, start changing background and clear the time interval
+          startBackground()
+          clearInterval(i)
+        }
+      }, 200)
+
     })
 
     $scope.setBackground = (n, hover = true) => {
@@ -51,8 +58,7 @@
         prjs[i].style.backgroundColor = 'transparent'
         prjs[i].style.opacity = opacity
       }
-      for (let i = 0; i < prjAdd.length; i++)
-        prjAdd[i].style.opacity = opacity
+      for (let i = 0; i < prjAdd.length; i++) { prjAdd[i].style.opacity = opacity }
     }
 
     function highlightBadge (i, highlight) {
