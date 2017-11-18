@@ -1,8 +1,8 @@
 # Portfolio Website 
-[![@iamstevendao](https://img.shields.io/badge/twitter-@iamstevendao-blue.svg)](https://twitter.com/iamstevendao) [![@linkedin](https://img.shields.io/badge/LinkedIn-@iamstevendao-blue.svg)](https://www.linkedin.com/in/steven-dao-b9a065127/)
 
 ### My [portfolio website](https://iamstevendao.github.io/portfolio/) built with [AngularJS](https://angularjs.org/), and forked from the [old version](https://github.com/iamstevendao/portfolio-html)
 
+### Read [my post](https://iamstevendao.github.io/blog/posts/general/2017/09/27/angularize-portfolio.html), about using AngularJS to change the game!!!
 
 ## Credits:
 - Code Syntax and Style: C#.
@@ -18,4 +18,4 @@
   - [Dog & Cat](https://www.desktopbackground.org/download/o/2012/02/22/348005_cats-and-dogs-wallpapers-hd-cute-dog-and-cat-wallpapers-hd-wallpapers_1366x768_h.jpg)
   - [Visual Studio Code](https://static.bespohk.com/img/blog/3/header.jpg)
 
-  made with :heart: by [Steven](https://github.com/iamstevendao).
+  made with &#x2764; by [Steven](https://github.com/iamstevendao).

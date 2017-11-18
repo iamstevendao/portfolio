@@ -14,14 +14,16 @@
   {
     "date": "June 2017",
     "job": {
-      "title": "Software Developer & IT Support at",
+      "title": "Software Developer at",
       "place": "Becas Technology",
       "link": "http://www.becas.com.au/"
     },
     "description": [
-      "Develop, implement applications, APIs for paging system solutions,",
-      "restaurant and gas station management.",
-      "Customer support with errors, bugs and required implementation."
+      "Develop Besmart, an Android app for use in bars, clubs which connects to a TCP/IP server",
+      "and be able to communicate among devices using SIP/VoIP.",
+      "Develop, upgrade POS software, config to use in restaurant, services station and clubs.",
+      "Develop, upgrade Backoffice app, used PHP to manage, control, admin the POS resources.",
+      "Maintain iOS apps."
     ]
   },
   {
