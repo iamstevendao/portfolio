@@ -35,13 +35,11 @@
     </nav>
   </header>
   <div class="content" ng-view>
-
     <!-- Banner -->
     <section id="banner">
       <div>
         <p>
           <span id="anim-header" class="anim-typewriter cl-cmt">//me and my stuff</span>
-
           <!-- Portfolio StevenDao = new Portfolio() {-->
           <span class="cl-cls w-wk">Portfolio</span>
           <span class="cl-txt">StevenDao</span>
@@ -51,7 +49,6 @@
           <span class="cl-txt w-wk">()
 						<br>{</span>
           <br>
-
           <!-- About = new About[] { Github, Blog, Twitter };  -->
           <span class="cl-var tab1 w-wk">About</span>
           <span class="cl-txt w-wk">=</span>
@@ -65,7 +62,6 @@
           </a>
           </span>
           <span class="w-wk cl-txt">};</span>
-
           <!-- //Or find me at: LinkedIn, CodePen, Repl.it  -->
           <p>
             <span class="cl-cmt tab1">// or find me at:</span>
@@ -80,7 +76,6 @@
         </p>
       </div>
     </section>
-
     <!-- Timeline -->
     <section id="timeline">
       <div>
@@ -108,7 +103,6 @@
         </span>
         <br>
         <span class="cl-txt w-wk tab1">{</span>
-
         <!-- Timeline Content -->
         <p ng-repeat="event in timeline">
           <span class="cl-txt tab2 w-wk">{</span>
@@ -132,9 +126,7 @@
         <span class="cl-txt w-wk">}</span>
       </div>
     </section>
-
     <!-- Interest -->
-
     <section id="interest" style="background-image:url({{bgInterest}})">
       <div class="col30">
         <ul>
@@ -150,12 +142,9 @@
         </ul>
       </div>
     </section>
-
     <!-- Project -->
-
     <section id="projects" style="background-image:url({{bgProject}})">
       <div>
-
         <!-- namespace Projects { -->
         <p class="prj-add">
           <span class="cl-key w-wk">namespace</span>
@@ -168,13 +157,12 @@
 							<span class="w-wk">//</span> For more projects, visit my</span>
           <a href="https://github.com/iamstevendao">
 						<span class="lk-cmt">Github</span></a><span>, or
-							<a href="https://iamstevendao.github.io/blog/projects/">
+							<a href="https://iamstevendao.github.io/blog/">
 								<span class="lk-cmt">blog</span>
           </a>
           </span>
           </span>
         </p>
-
         <!-- projects content -->
         <p class="prj" ng-repeat="project in projects" ng-show='project.place !=="School"'>
           <span class="cl-key w-wk tab1">class</span>
@@ -200,9 +188,7 @@
           </span>
           <span class="cl-txt tab1 w-wk">}</span>
         </p>
-
         <!-- SchoolProjects -->
-
         <p class="prj-add">
           <span class="cl-key w-wk tab1">class</span>
           <span class="cl-cls">SchoolProjects</span>
@@ -218,7 +204,6 @@
           <span class="cl-txt">();</span>
           </span>
         </p>
-
         <!-- School project content -->
         <p class="prj" ng-repeat="project in projects" ng-show='project.place =="School"'>
           <span class="cl-var tab2 w-wk">projects</span><span class="cl-txt w-wk">.</span><span class="cl-fn w-wk">Add</span><span class="cl-txt w-wk">(</span>
@@ -238,15 +223,12 @@
           <br>
           </span>
         </p>
-
         <span class="cl-txt tab1 w-wk">}</span>
         <br>
         <span class="cl-txt w-wk">}</span>
       </div>
     </section>
-
     <!-- Credits -->
-
     <section id="credit">
       <div>
         <span class="cl-cmt">// credits</span>
@@ -275,12 +257,10 @@
         </span>
         <a href="https://github.com/iamstevendao/portfolio">
 					<span class="cl-var lk-var">iamstevendao/portfolio</span></a><span class="cl-txt w-wk">;</span>
-
         <br>
         <span class="cl-txt w-wk">}</span>
       </div>
     </section>
-
     <div class="footer">
       <span id="anim-footer" class="anim-typewriter">made with &#x2764; by Steven Dao.</span>
     </div>
