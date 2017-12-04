@@ -7,7 +7,7 @@
 ## Credits:
 - Code Syntax and Style: C#.
 - Syntax Highlight, Background Color: [Visual Studio Code](https://code.visualstudio.com/)'s Dark Theme
-- Font: FiraMono(https://github.com/mozilla/Fira)
+- Font: [FiraMono](https://github.com/mozilla/Fira)
 - [d-oliveros/ngSmoothScroll](https://github.com/d-oliveros/ngSmoothScroll)
 
 - Images:
