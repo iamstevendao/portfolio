@@ -2,7 +2,7 @@
   'use strict'
   var App = angular.module('portfolio', ['smoothScroll', 'data'])
 
-  App.controller('PortfolioController', ['dataController', '$scope', function PortfolioController (dataController, $scope) {
+  App.controller('PortfolioController', ['dataController', '$scope', function PortfolioController(dataController, $scope) {
     var prjs = [], prjAdd = [], dots = [], timer = []
 
     // retrieve data
@@ -35,7 +35,7 @@
 
       timer = setTimeout(() => {
         $scope.setBackground(n === dots.length / 2 - 1 ? 0 : ++n, false)
-      }, 3000)
+      }, 4000)
     }
 
     // mouse enter the project name
@@ -52,7 +52,7 @@
       setBlur(false)
     }
 
-    function setBlur (blur = true) {
+    function setBlur(blur = true) {
       const opacity = blur ? 0.2 : 1
       for (let i = 0; i < prjs.length; i++) {
         prjs[i].style.backgroundColor = 'transparent'
@@ -61,23 +61,23 @@
       for (let i = 0; i < prjAdd.length; i++) { prjAdd[i].style.opacity = opacity }
     }
 
-    function highlightBadge (i, highlight) {
+    function highlightBadge(i, highlight) {
       dots[i].style.backgroundColor = highlight ? 'white' : 'black'
       dots[i].style.color = highlight ? 'black' : '#D4D4D4'
     }
 
-    function startBackground () {
+    function startBackground() {
       $scope.setBackground(0, false)
     }
 
-    function initializeData (data) {
+    function initializeData(data) {
       $scope.accounts = data[0]
       $scope.timeline = data[1]
       $scope.interests = data[2]
       $scope.projects = data[3]
     }
 
-    function initializeElements () {
+    function initializeElements() {
       dots = angular.element(document.getElementsByClassName('badge'))
       prjs = angular.element(document.getElementsByClassName('prj'))
       prjAdd = angular.element(document.getElementsByClassName('prj-add')) // additional elements in project
