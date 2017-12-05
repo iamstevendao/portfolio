@@ -46,22 +46,6 @@
     "image": "https://drive.google.com/uc?export=view&id=0B-Nh68ejfzKocTh2UjRsQzMweXc"
   },
   {
-    "name": "AromaPlayer",
-    "place": "Company",
-    "skills": [
-      "OpenGL",
-      "C++",
-      "VLC-SDK"
-    ],
-    "link": "https://aromajoin.com/software/apps/aroma-player",
-    "description": [
-      "AromaPlayer is a video player which can interact with AromaShooters",
-      "It allows you to add and enjoy aromas of your favorite videos.",
-      "C++ was always challenging when I needed a week to implement >.<,",
-      "It took me 1 year to plan, code, test and release."
-    ]
-  },
-  {
     "name": "AromaPlayer2.0",
     "place": "Company",
     "skills": [
@@ -69,10 +53,26 @@
       "C#",
       "MVVM"
     ],
-    "link": "https://aromajoin.com/software/apps/aroma-player",
+    "link": "https://aromajoin.com/en/software/apps/aroma-player",
     "description": [
       "Second version of AromaPlayer, built from the scratch with WPF",
       "With the help of my team, it is in testing stage after a half year developing."
+    ]
+  },
+  {
+    "name": "AromaPlayer",
+    "place": "Company",
+    "skills": [
+      "OpenGL",
+      "C++",
+      "VLC-SDK"
+    ],
+    "link": "https://aromajoin.com/en/software/apps/aroma-player",
+    "description": [
+      "AromaPlayer is a video player which can interact with AromaShooters",
+      "It allows you to add and enjoy aromas of your favorite videos.",
+      "C++ was always challenging when I needed a week to implement >.<,",
+      "It took me 1 year to plan, code, test and release."
     ]
   },
   {
