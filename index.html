@@ -1,32 +1,44 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="portfolio">
+<html lang="en"
+      ng-app="portfolio">
 
 <head>
   <meta charset="UTF-8" />
   <title>Steven's Portfolio</title>
   <base target="_blank">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="img/logo/avatar.jpg">
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <link rel="icon"
+        href="img/logo/avatar.jpg">
+  <link rel="stylesheet"
+        href="css/style.css">
 </head>
 
 <body ng-controller="PortfolioController">
   <header>
     <div>
-      <a target="_parent" href="#" scroll-to="banner">
+      <a target="_parent"
+         href="#"
+         scroll-to="banner">
         <img src="img/logo/avatar.jpg">
       </a>
     </div>
     <nav class="nav-bar">
       <ul>
         <li>
-          <a target="_parent" href="#" scroll-to="banner">About</a>
+          <a target="_parent"
+             href="#"
+             scroll-to="banner">About</a>
         </li>
         <li>
-          <a target="_parent" href="#" scroll-to="timeline">Timeline</a>
+          <a target="_parent"
+             href="#"
+             scroll-to="timeline">Timeline</a>
         </li>
         <li>
-          <a target="_parent" href="#" scroll-to="projects">Projects</a>
+          <a target="_parent"
+             href="#"
+             scroll-to="projects">Projects</a>
         </li>
         <li>
           <a href="https://iamstevendao.github.io/blog">Blog</a>
@@ -34,12 +46,14 @@
       </ul>
     </nav>
   </header>
-  <div class="content" ng-view>
+  <div class="content"
+       ng-view>
     <!-- Banner -->
     <section id="banner">
       <div>
         <p>
-          <span id="anim-header" class="anim-typewriter cl-cmt">// me and my stuff</span>
+          <span id="anim-header"
+                class="anim-typewriter cl-cmt">// me and my stuff</span>
           <!-- Portfolio StevenDao = new Portfolio() {-->
           <span class="cl-cls w-wk">Portfolio</span>
           <span class="cl-txt">StevenDao</span>
@@ -56,18 +70,22 @@
           <span class="cl-cls w-wk">About</span>
           <span class="cl-txt w-wk">[]</span>
           <span class="w-wk cl-txt">{</span>
-          <span class="cl-txt" ng-repeat="account in accounts.important">
+          <span class="cl-txt"
+                ng-repeat="account in accounts.important">
 						<a ng-href="{{account.link}}">
-							<span class="lk-txt">{{account.name}}</span><span class="w-wk" ng-if="!$last">,</span>
+							<span class="lk-txt">{{account.name}}</span><span class="w-wk"
+                ng-if="!$last">,</span>
           </a>
           </span>
           <span class="w-wk cl-txt">};</span>
           <!-- //Or find me at: LinkedIn, CodePen, Repl.it  -->
           <p>
             <span class="cl-cmt tab1">// or find me at:</span>
-            <span class="cl-cmt" ng-repeat="account in accounts.other">
+            <span class="cl-cmt"
+                  ng-repeat="account in accounts.other">
 							<a ng-href="{{account.link}}">
-								<span class="lk-cmt">{{account.name}}</span><span class="w-wk" ng-if="!$last">,</span>
+								<span class="lk-cmt">{{account.name}}</span><span class="w-wk"
+                  ng-if="!$last">,</span>
             </a>
             </span>
             <br>
@@ -110,12 +128,14 @@
 						<span class="w-wk">"</span>{{event.date}}<span class="w-wk">"<span class="cl-txt">,</span></span>
           </span>
           <span class="cl-str"><span class="w-wk">"</span>{{event.job.title}}</span>
-          <a ng-if="event.job.hasOwnProperty('place')" ng-href="{{event.job.link}}">
+          <a ng-if="event.job.hasOwnProperty('place')"
+             ng-href="{{event.job.link}}">
 						<span class="cl-str lk-str"> {{event.job.place}}</span></a><span class="w-wk cl-str">"</span>
           <span class="cl-txt w-wk">}<span ng-if='!$last'>,</span>
           </span>
           <br>
-          <span class="cl-cmt" ng-repeat="desc in event.description">
+          <span class="cl-cmt"
+                ng-repeat="desc in event.description">
 						<span class="tab2 w-wk">//</span>
           <span>{{desc}}</span>
           <br>
@@ -127,7 +147,8 @@
       </div>
     </section>
     <!-- Interest -->
-    <section id="interest" style="background-image:url({{bgInterest}})">
+    <section id="interest"
+             style="background-image:url({{bgInterest}})">
       <div class="col30">
         <ul>
           <li>
@@ -135,7 +156,8 @@
             <br>
             <br>
           </li>
-          <li ng-repeat="interest in interests" ng-mouseover="setBackground($index)">
+          <li ng-repeat="interest in interests"
+              ng-mouseover="setBackground($index)">
             <span class="tag badge">#{{interest.name}}</span>
             <span class="tag badge">#{{interest.name2}}</span>
           </li>
@@ -143,7 +165,8 @@
       </div>
     </section>
     <!-- Project -->
-    <section id="projects" style="background-image:url({{bgProject}})">
+    <section id="projects"
+             style="background-image:url({{bgProject}})">
       <div>
         <!-- namespace Projects { -->
         <p class="prj-add">
@@ -164,7 +187,9 @@
           </span>
         </p>
         <!-- projects content -->
-        <p class="prj" ng-repeat="project in projects" ng-show='project.place !=="School"'>
+        <p class="prj"
+           ng-repeat="project in projects"
+           ng-show='project.place !=="School"'>
           <span class="cl-key w-wk tab1">class</span>
           <a ng-href="{{project.link}}">
 						<span class="lk-cls cl-cls" ng-mouseenter="enter($index)" ng-mouseleave="leave()">{{project.name}}</span>
@@ -176,12 +201,13 @@
           <span class="cl-cls tab2 w-wk">Skills</span>
           <span class="cl-txt w-wk">skills[] = {</span>
           <span ng-repeat="skill in project.skills">
-						<span class="cl-var">{{skill}}</span>
-          <span ng-if="!$last" class="cl-txt w-wk">,</span>
+						<span class="cl-var">{{skill}}</span><span ng-if="!$last"
+                class="cl-txt w-wk">,</span>
           </span>
           <span class="cl-txt w-wk">};</span>
           <br>
-          <span class="cl-cmt" ng-repeat="desc in project.description">
+          <span class="cl-cmt"
+                ng-repeat="desc in project.description">
 						<span class="tab2 w-wk">//</span>
           <span>{{desc}}</span>
           <br>
@@ -201,23 +227,26 @@
           <span class="cl-key">new</span>
           <span class="cl-cls">List</span>
           <span class="cl-txt">&lt;</span><span class="cl-cls">Project</span><span class="cl-txt">&gt;</span>
-          <span class="cl-txt">();</span> 
+          <span class="cl-txt">();</span>
           </span>
         </p>
         <!-- School project content -->
-        <p class="prj" ng-repeat="project in projects" ng-show='project.place =="School"'>
+        <p class="prj"
+           ng-repeat="project in projects"
+           ng-show='project.place =="School"'>
           <span class="cl-var tab2 w-wk">projects</span><span class="cl-txt w-wk">.</span><span class="cl-fn w-wk">Add</span><span class="cl-txt w-wk">(</span>
           <span class="cl-key w-wk">new</span>
           <span class="cl-cls w-wk">Project</span><span class="cl-txt w-wk">(</span>
           <span class="cl-str">
 						<span class="w-wk">"</span><a ng-href="{{project.link}}"><span class="lk-str">{{project.name}}</span></a><span class="w-wk">"</span></span><span class="cl-txt w-wk">,</span>
           <span ng-repeat='skill in project.skills'>
-						<span class="cl-var">{{skill}}</span>
-          <span ng-if='!$last' class="cl-txt w-wk">,</span>
+						<span class="cl-var">{{skill}}</span><span ng-if='!$last'
+                class="cl-txt w-wk">,</span>
           </span>
           <span class="cl-txt w-wk">));</span>
           <br>
-          <span class="cl-cmt" ng-repeat="desc in project.description">
+          <span class="cl-cmt"
+                ng-repeat="desc in project.description">
 						<span class="tab2 w-wk">//</span>
           <span>{{desc}}</span>
           <br>
@@ -262,7 +291,8 @@
       </div>
     </section>
     <div class="footer">
-      <span id="anim-footer" class="anim-typewriter">made with &#x2764; by Steven Dao.</span>
+      <span id="anim-footer"
+            class="anim-typewriter">made with &#x2764; by Steven Dao.</span>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
