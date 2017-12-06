@@ -19,7 +19,7 @@
     <div>
       <a target="_parent"
          href="#"
-         scroll-to="banner">
+         scroll-to="about">
         <img src="img/logo/avatar.jpg">
       </a>
     </div>
@@ -28,7 +28,7 @@
         <li>
           <a target="_parent"
              href="#"
-             scroll-to="banner">About</a>
+             scroll-to="about">About</a>
         </li>
         <li>
           <a target="_parent"
@@ -48,50 +48,29 @@
   </header>
   <div class="content"
        ng-view>
-    <!-- Banner -->
-    <section id="banner">
+    <!-- about -->
+    <section id="about">
       <div>
-        <p>
-          <span id="anim-header"
+        <p> <span id="anim-header"
                 class="anim-typewriter cl-cmt">// me and my stuff</span>
-          <!-- Portfolio StevenDao = new Portfolio() {-->
-          <span class="cl-cls w-wk">Portfolio</span>
-          <span class="cl-txt">StevenDao</span>
-          <span class="cl-txt w-wk">=</span>
-          <span class="cl-key w-wk">new </span>
-          <span class="cl-cls w-wk">Portfolio</span>
-          <span class="cl-txt w-wk">()
-						<br>{</span>
-          <br>
-          <!-- About = new About[] { Github, Blog, Twitter };  -->
-          <span class="cl-var tab1 w-wk">About</span>
-          <span class="cl-txt w-wk">=</span>
-          <span class="cl-key w-wk">new</span>
-          <span class="cl-cls w-wk">About</span>
-          <span class="cl-txt w-wk">[]</span>
-          <span class="w-wk cl-txt">{</span>
-          <span class="cl-txt"
-                ng-repeat="account in accounts.important">
-						<a ng-href="{{account.link}}">
-							<span class="lk-txt">{{account.name}}</span><span class="w-wk"
-                ng-if="!$last">,</span>
-          </a>
-          </span>
-          <span class="w-wk cl-txt">};</span>
-          <!-- //Or find me at: LinkedIn, CodePen, Repl.it  -->
-          <p>
-            <span class="cl-cmt tab1">// or find me at:</span>
-            <span class="cl-cmt"
-                  ng-repeat="account in accounts.other">
-							<a ng-href="{{account.link}}">
-								<span class="lk-cmt">{{account.name}}</span><span class="w-wk"
-                  ng-if="!$last">,</span>
+        </p>
+        <span class="cl-key w-wk">new </span>
+        <span class="cl-cls w-wk">Portfolio</span>
+        <span class="cl-txt w-wk">({</span>
+        <div class="tab1 row"
+             ng-repeat="account in accounts">
+          <div class="col20">
+            <span class="cl-var">
+            <a ng-href="{{account.link}}">
+							<span class="lk-var">{{account.name}}</span><span class="w-wk"
+                  ng-if="!$last">,</span> &emsp;
             </a>
             </span>
-            <br>
-            <span class="cl-txt w-wk">}</span>
-          </p>
-        </p>
+          </div>
+          <div><span class="cl-cmt"><span class="w-wk">//</span> {{account.description}}</span>
+          </div>
+        </div>
+        <span class="w-wk cl-txt">});</span>
       </div>
     </section>
     <!-- Timeline -->

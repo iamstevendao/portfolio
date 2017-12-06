@@ -15,6 +15,6 @@
   - [Liverpool](https://wallpaperscraft.com/image/liverpool_uefa_evrofinal_england_cup_27760_1920x1080.jpg)
   - [Dragonball](https://i.ytimg.com/vi/Qd54ZrSkIw0/maxresdefault.jpg)
   - [Dog & Cat](https://media.giphy.com/media/TaCY4UYKW6PLy/giphy.gif)
-  - Visual Studio Code: just my random code screen
+  - Visual Studio Code: just my random codeing screen
 
   made with &#x2764; by [Steven](https://github.com/iamstevendao).
