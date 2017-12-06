@@ -9,8 +9,8 @@
     ],
     "link": "https://github.com/iamstevendao/email-sender-service",
     "description": [
-      "A small NodeJS app allows users to send emails to anyone without login,",
-      "Use no integrated API from Email Services, all I use is the hand-rolled HTTP request."
+      "A small NodeJS app allows users to send emails to anyone without logging in,",
+      "Use the hand-rolled HTTP requests instead of integrated APIs from Email Services."
     ],
     "image": "https://ncexfa.bn1302.livefilestore.com/y4mwcQJFgjeav0XgwM5ZVeuHxVzJCNyxXW0mlbRuf3Efyx1WRndZKNpm22zWri0a9_UgTtRDSJ8RzLTqkZLqFzPjNsONwqMpwY9EAcj8UjGvbJXfz3LSlpOAnOjbAtqEtpTqJ69wbGvw4bxVP2GDFTLna0zUduWhb9ouxBdHRDCFORFCHsblPv_5uXGSC9I-4poOQhwKs_tl8I8evufT2q7UQ?width=1024&height=660&cropmode=none"
   },
@@ -56,7 +56,7 @@
     "link": "https://aromajoin.com/en/software/apps/aroma-player",
     "description": [
       "Second version of AromaPlayer, built from the scratch with WPF",
-      "With the help of my team, it is in testing stage after a half year developing."
+      "With the help of my team, it is in testing stage after a half year of development."
     ]
   },
   {
