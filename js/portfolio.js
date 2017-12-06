@@ -6,9 +6,9 @@
     var prjs = [], prjAdd = [], dots = [], timer = []
 
     // retrieve data
-    dataController.request().then((res) => {
+    dataController.request().then(res => {
       // get data only from the response and pass to initializeData
-      initializeData(res.map((value) => (value.data)))
+      initializeData(res.map(value => value.data))
     })
 
     angular.element(() => {

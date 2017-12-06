@@ -7,20 +7,36 @@ const StevenDao = new Portfolio({
   LinkedIn, // another portfolio page, but I don't really use it
 });
 
-const jobs = [
+const now = [
   {
     title: '',
-    from: 'xxx',
-    to: 'xxx'
+    since: '',
+    description: ''
   },
-  {
-
-  }
 ]
 
-const learning = [
+const then = {
+  working: [
+    {
+      title: '',
+      from: 'xxx', to: 'xxx',
+      description: ''
+    },
+    {
 
-]
+    }
+  ],
+  learning: [
+    {
+      title: '',
+      from: 'xxx', to: 'xxx',
+      description: ''
+    },
+    {
+
+    }
+  ]
+}
 
 const projects = [
   {

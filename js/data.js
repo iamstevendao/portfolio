@@ -11,12 +11,8 @@
       })
 
       // request function
-      var request = function () {
-        return $q.all(requests)
-          .then(function (data) {
-            return data
-          })
-      }
-      return { request: request }
+      const request = () => $q.all(requests).then(data => data)
+
+      return { request }
     }])
 })(window.angular)
