@@ -232,6 +232,7 @@ section>div {
   line-height: 180%;
 }
 #about p {
+  font-size: 18px;
   margin-bottom: -10px;
 }
 #about span {
