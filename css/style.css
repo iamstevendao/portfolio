@@ -32,6 +32,27 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+}
+
+.col20 {
+  width: 20%;
+}
+
+.col30 {
+  width: 30%;
+}
+
+.hide {
+  display: none;
+}
 
 /*coding*/
 
@@ -58,9 +79,6 @@ a {
 .cl-var {
   color: #9DDBFB;
 }
-
-
-/* color-function */
 
 .cl-fn {
   color: #DCDCAD;
@@ -163,12 +181,10 @@ header img {
 
 .nav-bar a {
   padding: 15px;
-  text-decoration: none;
   color: white;
 }
 
 .nav-bar ul {
-  list-style: none;
   display: flex;
   flex-direction: row;
 }
@@ -213,10 +229,8 @@ section {
 
 section a:visited,
 section a {
-  text-decoration: none;
   color: inherit;
 }
-
 
 section>div {
   margin: 0 auto;
@@ -258,31 +272,6 @@ section>div {
 #interest>div {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#interest>div>div {
-  background-color: rgba(52, 73, 94, 0.75);
-}
-
-#interest ul {
-  list-style: none;
-}
-.row {
-  width: 100%;
-  display: flex;
-  align-content: flex-start;
-}
-.col20 {
-  width: 20%;
-}
-.col30 {
-  width: 30%;
-}
-
-.hide {
-  display: none;
 }
 
 .mySlides {
