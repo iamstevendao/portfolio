@@ -5,8 +5,8 @@
 ### Read [my post](https://iamstevendao.github.io/blog/posts/general/2017/09/27/angularize-portfolio.html), about using AngularJS to change the game!!!
 
 ## Credits:
-- Code Syntax and Style: C#.
-- Syntax Highlight, Background Color: [Visual Studio Code](https://code.visualstudio.com/)'s Dark Theme
+- Code Syntax and Style: Javascript (About), C# (the rest).
+- Syntax Highlight, Background Color: [Visual Studio Code](https://code.visualstudio.com/)'s Dark+ Theme
 - Font: [FiraMono](https://github.com/mozilla/Fira)
 - [d-oliveros/ngSmoothScroll](https://github.com/d-oliveros/ngSmoothScroll)
 
