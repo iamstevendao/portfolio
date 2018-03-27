@@ -1,5 +1,18 @@
 [
   {
+    "date": "December 2017",
+    "job": {
+      "title": "Junior Full Stack Developer at",
+      "place": "EducationLink",
+      "link": "http://geteducation.link/"
+    },
+    "description": [
+      "A new journey, new role, new challenges",
+      "A place where I find truely excited about what I do",
+      "Playing around mostly with Meteor and Vue, they surprise me day by day!"
+    ]
+  },
+  {
     "date": "September 2017",
     "job": {
       "title": "Embarrass myself by writing",
