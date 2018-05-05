@@ -1,10 +1,10 @@
 # Portfolio Website 
 
-### My [portfolio website](https://iamstevendao.github.io/portfolio/) built with [AngularJS](https://angularjs.org/), and forked from the [old version](https://github.com/iamstevendao/portfolio-html)
+##### My [portfolio website](https://iamstevendao.github.io/portfolio/) built with [AngularJS](https://angularjs.org/), and forked from the [old version](https://github.com/iamstevendao/portfolio-html).
 
-### Read [my post](https://iamstevendao.github.io/blog/posts/general/2017/09/27/angularize-portfolio.html), about using AngularJS to change the game!!!
+#### Checkout my [post](https://iamstevendao.github.io/blog/posts/general/2017/09/27/angularize-portfolio.html), about using AngularJS to change the game.
 
-## Credits:
+### Credits:
 - Code syntax and style: Javascript (About), C# (the rest).
 - Syntax highlight, Background color: [Visual Studio Code](https://code.visualstudio.com/)'s Dark+ Theme
 - Font: [FiraMono](https://github.com/mozilla/Fira)
@@ -17,4 +17,4 @@
   - [Dog & Cat](https://media.giphy.com/media/TaCY4UYKW6PLy/giphy.gif)
   - Visual Studio Code: just my random coding screen
 
-  made with &#x2764; by [Steven](https://github.com/iamstevendao).
+made with &#x2764; by [Steven](https://github.com/iamstevendao).
